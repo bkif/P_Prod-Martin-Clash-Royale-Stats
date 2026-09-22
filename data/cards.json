@@ -1,11 +1,10 @@
 {
-  "schemaVersion": "2.0",
+  "schemaVersion": "3.0",
   "lastVerified": "2026-09-22",
-  "sourceNotes": [
-    "Card/feature coverage aligned with official Clash Royale updates available by 2026-09-22.",
-    "Hero variants are represented separately and linked to their base card.",
-    "Evolution availability is represented by hasEvolution; exact balance stats should be stored separately.",
-    "Usage/win-rate values are intentionally not hard-coded because they are live/period-dependent."
+  "notes": [
+    "Champs en anglais, noms et descriptions en français",
+    "Images locales depuis cards-150/",
+    "variant: normal | evolution | hero | champion | temporary | tower"
   ],
   "deckRules": {
     "cardsPerDeck": 8,
@@ -14,1823 +13,276 @@
     "wildSlot": 1
   },
   "cards": [
-    {
-      "id": "knight",
-      "name": "Knight",
-      "elixir": 3,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "defense"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "archers",
-      "name": "Archers",
-      "elixir": 3,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "air_defense"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "goblins",
-      "name": "Goblins",
-      "elixir": 2,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "spear-goblins",
-      "name": "Spear Goblins",
-      "elixir": 2,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "skeletons",
-      "name": "Skeletons",
-      "elixir": 1,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "bomber",
-      "name": "Bomber",
-      "elixir": 2,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "bats",
-      "name": "Bats",
-      "elixir": 2,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "fire-spirit",
-      "name": "Fire Spirit",
-      "elixir": 1,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "ice-spirit",
-      "name": "Ice Spirit",
-      "elixir": 1,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "electro-spirit",
-      "name": "Electro Spirit",
-      "elixir": 1,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "barbarians",
-      "name": "Barbarians",
-      "elixir": 5,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "minions",
-      "name": "Minions",
-      "elixir": 3,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "minion-horde",
-      "name": "Minion Horde",
-      "elixir": 5,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "royal-giant",
-      "name": "Royal Giant",
-      "elixir": 6,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "royal-recruits",
-      "name": "Royal Recruits",
-      "elixir": 7,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "elite-barbarians",
-      "name": "Elite Barbarians",
-      "elixir": 6,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "rascals",
-      "name": "Rascals",
-      "elixir": 5,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "royal-hogs",
-      "name": "Royal Hogs",
-      "elixir": 5,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "hog-rider",
-      "name": "Hog Rider",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "battle-ram",
-      "name": "Battle Ram",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "valkyrie",
-      "name": "Valkyrie",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "defense",
-        "splash"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "musketeer",
-      "name": "Musketeer",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "air_defense"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "wizard",
-      "name": "Wizard",
-      "elixir": 5,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "air_defense",
-        "splash"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "mini-pekka",
-      "name": "Mini P.E.K.K.A",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "tank_killer"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "giant",
-      "name": "Giant",
-      "elixir": 5,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "tank"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "giant-skeleton",
-      "name": "Giant Skeleton",
-      "elixir": 6,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "witch",
-      "name": "Witch",
-      "elixir": 5,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "baby-dragon",
-      "name": "Baby Dragon",
-      "elixir": 4,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "air_defense",
-        "splash"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "prince",
-      "name": "Prince",
-      "elixir": 5,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "dark-prince",
-      "name": "Dark Prince",
-      "elixir": 4,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "bowler",
-      "name": "Bowler",
-      "elixir": 5,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "executioner",
-      "name": "Executioner",
-      "elixir": 5,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "air_defense",
-        "splash"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "hunter",
-      "name": "Hunter",
-      "elixir": 4,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "air_defense",
-        "tank_killer"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "wall-breakers",
-      "name": "Wall Breakers",
-      "elixir": 2,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "cycle"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "goblin-giant",
-      "name": "Goblin Giant",
-      "elixir": 6,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "tank"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "skeleton-barrel",
-      "name": "Skeleton Barrel",
-      "elixir": 3,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "goblin-drill",
-      "name": "Goblin Drill",
-      "elixir": 4,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "electro-dragon",
-      "name": "Electro Dragon",
-      "elixir": 5,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "cannon-cart",
-      "name": "Cannon Cart",
-      "elixir": 5,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "pekka",
-      "name": "P.E.K.K.A",
-      "elixir": 7,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "tank"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "golem",
-      "name": "Golem",
-      "elixir": 8,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "tank"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "x-bow",
-      "name": "X-Bow",
-      "elixir": 6,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "siege"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "mortar",
-      "name": "Mortar",
-      "elixir": 4,
-      "rarity": "common",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "siege"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "flying-machine",
-      "name": "Flying Machine",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "zappies",
-      "name": "Zappies",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "three-musketeers",
-      "name": "Three Musketeers",
-      "elixir": 9,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "battle-healer",
-      "name": "Battle Healer",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "elixir-golem",
-      "name": "Elixir Golem",
-      "elixir": 3,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "royal-ghost",
-      "name": "Royal Ghost",
-      "elixir": 3,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "bandit",
-      "name": "Bandit",
-      "elixir": 3,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "princess",
-      "name": "Princess",
-      "elixir": 3,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "magic-archer",
-      "name": "Magic Archer",
-      "elixir": 4,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "lumberjack",
-      "name": "Lumberjack",
-      "elixir": 4,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "inferno-dragon",
-      "name": "Inferno Dragon",
-      "elixir": 4,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "air_defense",
-        "tank_killer"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "electro-wizard",
-      "name": "Electro Wizard",
-      "elixir": 4,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "air_defense",
-        "reset"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "night-witch",
-      "name": "Night Witch",
-      "elixir": 4,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "mother-witch",
-      "name": "Mother Witch",
-      "elixir": 4,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "fisherman",
-      "name": "Fisherman",
-      "elixir": 3,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "control"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "ram-rider",
-      "name": "Ram Rider",
-      "elixir": 5,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "mega-knight",
-      "name": "Mega Knight",
-      "elixir": 7,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "tank"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "sparky",
-      "name": "Sparky",
-      "elixir": 6,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "lava-hound",
-      "name": "Lava Hound",
-      "elixir": 7,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "tank",
-        "air"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "miner",
-      "name": "Miner",
-      "elixir": 3,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "cycle"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "ice-wizard",
-      "name": "Ice Wizard",
-      "elixir": 3,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "mega-minion",
-      "name": "Mega Minion",
-      "elixir": 3,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "phoenix",
-      "name": "Phoenix",
-      "elixir": 4,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "monk",
-      "name": "Monk",
-      "elixir": 5,
-      "rarity": "champion",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": true,
-      "roles": [
-        "champion"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "skeleton-king",
-      "name": "Skeleton King",
-      "elixir": 4,
-      "rarity": "champion",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": true,
-      "roles": [
-        "champion"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "archer-queen",
-      "name": "Archer Queen",
-      "elixir": 5,
-      "rarity": "champion",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": true,
-      "roles": [
-        "champion"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "golden-knight",
-      "name": "Golden Knight",
-      "elixir": 4,
-      "rarity": "champion",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": true,
-      "roles": [
-        "champion"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "mighty-miner",
-      "name": "Mighty Miner",
-      "elixir": 4,
-      "rarity": "champion",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": true,
-      "roles": [
-        "champion"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "little-prince",
-      "name": "Little Prince",
-      "elixir": 3,
-      "rarity": "champion",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": true,
-      "roles": [
-        "champion"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "goblinstein",
-      "name": "Goblinstein",
-      "elixir": 5,
-      "rarity": "champion",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": true,
-      "roles": [
-        "champion"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "goblin-machine",
-      "name": "Goblin Machine",
-      "elixir": 5,
-      "rarity": "epic",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "dart-goblin",
-      "name": "Dart Goblin",
-      "elixir": 3,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": true
-    },
-    {
-      "id": "berserker",
-      "name": "Berserker",
-      "elixir": 2,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "rune-giant",
-      "name": "Rune Giant",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "tank"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "spirit-empress",
-      "name": "Spirit Empress",
-      "elixir": 4,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "air"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "ronin",
-      "name": "Ronin",
-      "elixir": 4,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "suspicious-bush",
-      "name": "Suspicious Bush",
-      "elixir": 2,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "goblin-demolisher",
-      "name": "Goblin Demolisher",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "royal-chef",
-      "name": "Royal Chef",
-      "elixir": 3,
-      "rarity": "legendary",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "minion-giant",
-      "name": "Minion Giant",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "troop",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "air",
-        "tank"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "cannon",
-      "name": "Cannon",
-      "elixir": 3,
-      "rarity": "common",
-      "category": "building",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "building"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "tesla",
-      "name": "Tesla",
-      "elixir": 4,
-      "rarity": "common",
-      "category": "building",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "air_defense",
-        "building"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "bomb-tower",
-      "name": "Bomb Tower",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "building",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "building",
-        "splash"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "inferno-tower",
-      "name": "Inferno Tower",
-      "elixir": 5,
-      "rarity": "rare",
-      "category": "building",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "air_defense",
-        "building",
-        "tank_killer"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "goblin-cage",
-      "name": "Goblin Cage",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "building",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "building"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "tombstone",
-      "name": "Tombstone",
-      "elixir": 3,
-      "rarity": "rare",
-      "category": "building",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "building"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "goblin-hut",
-      "name": "Goblin Hut",
-      "elixir": 5,
-      "rarity": "rare",
-      "category": "building",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "barbarian-hut",
-      "name": "Barbarian Hut",
-      "elixir": 7,
-      "rarity": "rare",
-      "category": "building",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "furnace",
-      "name": "Furnace",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "building",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "elixir-collector",
-      "name": "Elixir Collector",
-      "elixir": 6,
-      "rarity": "rare",
-      "category": "building",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "arrows",
-      "name": "Arrows",
-      "elixir": 3,
-      "rarity": "common",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "zap",
-      "name": "Zap",
-      "elixir": 2,
-      "rarity": "common",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell",
-        "small_spell",
-        "reset"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "giant-snowball",
-      "name": "Giant Snowball",
-      "elixir": 2,
-      "rarity": "common",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell",
-        "small_spell"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "fireball",
-      "name": "Fireball",
-      "elixir": 4,
-      "rarity": "rare",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell",
-        "medium_spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "rocket",
-      "name": "Rocket",
-      "elixir": 6,
-      "rarity": "rare",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell",
-        "heavy_spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "earthquake",
-      "name": "Earthquake",
-      "elixir": 3,
-      "rarity": "rare",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell",
-        "building_counter"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "the-log",
-      "name": "The Log",
-      "elixir": 2,
-      "rarity": "legendary",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell",
-        "small_spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "tornado",
-      "name": "Tornado",
-      "elixir": 3,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "control"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "freeze",
-      "name": "Freeze",
-      "elixir": 4,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "control"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "poison",
-      "name": "Poison",
-      "elixir": 4,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "lightning",
-      "name": "Lightning",
-      "elixir": 6,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell",
-        "heavy_spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "rage",
-      "name": "Rage",
-      "elixir": 2,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "clone",
-      "name": "Clone",
-      "elixir": 3,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "mirror",
-      "name": "Mirror",
-      "elixir": 1,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "barbarian-barrel",
-      "name": "Barbarian Barrel",
-      "elixir": 2,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell",
-        "small_spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "goblin-barrel",
-      "name": "Goblin Barrel",
-      "elixir": 3,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition",
-        "bait"
-      ],
-      "hasEvolution": true
-    },
-    {
-      "id": "graveyard",
-      "name": "Graveyard",
-      "elixir": 5,
-      "rarity": "legendary",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "win_condition"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "void",
-      "name": "Void",
-      "elixir": 3,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "goblin-curse",
-      "name": "Goblin Curse",
-      "elixir": 3,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "vines",
-      "name": "Vines",
-      "elixir": 3,
-      "rarity": "epic",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [
-        "spell"
-      ],
-      "hasEvolution": false
-    },
-    {
-      "id": "royal-delivery",
-      "name": "Royal Delivery",
-      "elixir": 3,
-      "rarity": "common",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "heal-spirit",
-      "name": "Heal Spirit",
-      "elixir": 1,
-      "rarity": "rare",
-      "category": "spell",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "tower-princess",
-      "name": "Tower Princess",
-      "elixir": 0,
-      "rarity": "tower",
-      "category": "tower",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "cannoneer",
-      "name": "Cannoneer",
-      "elixir": 0,
-      "rarity": "tower",
-      "category": "tower",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "dagger-duchess",
-      "name": "Dagger Duchess",
-      "elixir": 0,
-      "rarity": "tower",
-      "category": "tower",
-      "isHero": false,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-knight",
-      "name": "Hero Knight",
-      "elixir": 3,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Knight",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-valkyrie",
-      "name": "Hero Valkyrie",
-      "elixir": 4,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Valkyrie",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-musketeer",
-      "name": "Hero Musketeer",
-      "elixir": 4,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Musketeer",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-wizard",
-      "name": "Hero Wizard",
-      "elixir": 5,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Wizard",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-mini-pekka",
-      "name": "Hero Mini P.E.K.K.A",
-      "elixir": 4,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Mini P.E.K.K.A",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-dark-prince",
-      "name": "Hero Dark Prince",
-      "elixir": 4,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Dark Prince",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-berserker",
-      "name": "Hero Berserker",
-      "elixir": 2,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Berserker",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-barbarian-barrel",
-      "name": "Hero Barbarian Barrel",
-      "elixir": 2,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Barbarian Barrel",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-magic-archer",
-      "name": "Hero Magic Archer",
-      "elixir": 4,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Magic Archer",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-tombstone",
-      "name": "Hero Tombstone",
-      "elixir": 3,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Tombstone",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-balloon",
-      "name": "Hero Balloon",
-      "elixir": 5,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Balloon",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-goblins",
-      "name": "Hero Goblins",
-      "elixir": 2,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Goblins",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-mega-minion",
-      "name": "Hero Mega Minion",
-      "elixir": 3,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Mega Minion",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-bowler",
-      "name": "Hero Bowler",
-      "elixir": 5,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Bowler",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-giant",
-      "name": "Hero Giant",
-      "elixir": 5,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Giant",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-ice-golem",
-      "name": "Hero Ice Golem",
-      "elixir": 2,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Ice Golem",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    },
-    {
-      "id": "hero-ice-wizard",
-      "name": "Hero Ice Wizard",
-      "elixir": 3,
-      "rarity": "hero",
-      "category": "hero",
-      "isHero": true,
-      "isEvolution": false,
-      "isChampion": false,
-      "roles": [],
-      "baseCard": "Ice Wizard",
-      "ability": "Hero ability",
-      "hasEvolution": false
-    }
+
+    { "id": "knight", "name": "Chevalier", "variant": "normal", "baseCard": "knight", "elixir": 3, "rarity": "common", "category": "troop", "image": "cards-150/knight.png", "description": "Un spécialiste du combat rapproché, cousin charmant et cultivé du barbare.", "roles": ["defense"] },
+    { "id": "knight-evo", "name": "Chevalier Évolué", "variant": "evolution", "baseCard": "knight", "elixir": 3, "rarity": "common", "category": "troop", "image": "cards-150/knight-ev1.png", "description": "Pendant 2 cycles, le Chevalier évolué subit moins de dégâts lorsqu'il n'attaque pas.", "roles": ["defense"] },
+    { "id": "knight-hero", "name": "Chevalier Héroïque", "variant": "hero", "baseCard": "knight", "elixir": 3, "rarity": "hero", "category": "hero", "image": "cards-150/knight-hero.png", "description": "Version héroïque du Chevalier avec sa capacité Provocation Triomphante.", "roles": ["defense"] },
+
+    { "id": "archers", "name": "Archers", "variant": "normal", "baseCard": "archers", "elixir": 3, "rarity": "common", "category": "troop", "image": "cards-150/archers.png", "description": "Une paire d'archères capables de cibler les unités terrestres et aériennes.", "roles": ["air_defense"] },
+    { "id": "archers-evo", "name": "Archers Évolués", "variant": "evolution", "baseCard": "archers", "elixir": 3, "rarity": "common", "category": "troop", "image": "cards-150/archers-ev1.png", "description": "Pendant 2 cycles, les Archers Évolués bénéficient du Tir Puissant.", "roles": ["air_defense"] },
+
+    { "id": "goblins", "name": "Gobelins", "variant": "normal", "baseCard": "goblins", "elixir": 2, "rarity": "common", "category": "troop", "image": "cards-150/goblins.png", "description": "Trois gobelins rapides et agressifs.", "roles": [] },
+    { "id": "spear-goblins", "name": "Gobelins à lances", "variant": "normal", "baseCard": "spear-goblins", "elixir": 2, "rarity": "common", "category": "troop", "image": "cards-150/spear-goblins.png", "description": "Trois gobelins lançant des lances à distance.", "roles": [] },
+
+    { "id": "skeletons", "name": "Squelettes", "variant": "normal", "baseCard": "skeletons", "elixir": 1, "rarity": "common", "category": "troop", "image": "cards-150/skeletons.png", "description": "Trois combattants de mêlée, rapides mais faibles.", "roles": [] },
+    { "id": "skeletons-evo", "name": "Squelettes Évolués", "variant": "evolution", "baseCard": "skeletons", "elixir": 1, "rarity": "common", "category": "troop", "image": "cards-150/skeletons-ev1.png", "description": "Pendant 2 cycles, les Squelettes Évolués peuvent se cloner lorsqu'ils attaquent.", "roles": [] },
+
+    { "id": "bomber", "name": "Bombardier", "variant": "normal", "baseCard": "bomber", "elixir": 2, "rarity": "common", "category": "troop", "image": "cards-150/bomber.png", "description": "Petit squelette sans grande protection qui lance des bombes.", "roles": [] },
+    { "id": "bomber-evo", "name": "Bombardier Évolué", "variant": "evolution", "baseCard": "bomber", "elixir": 2, "rarity": "common", "category": "troop", "image": "cards-150/bomber-ev1.png", "description": "Pendant 2 cycles, ses bombes rebondissent deux fois après le lancer initial.", "roles": [] },
+
+    { "id": "bats", "name": "Chauves-souris", "variant": "normal", "baseCard": "bats", "elixir": 2, "rarity": "common", "category": "troop", "image": "cards-150/bats.png", "description": "Génère une poignée de petites créatures volantes.", "roles": [] },
+    { "id": "bats-evo", "name": "Chauves-souris Évoluées", "variant": "evolution", "baseCard": "bats", "elixir": 2, "rarity": "common", "category": "troop", "image": "cards-150/bats-ev1.png", "description": "Pendant 2 cycles, les Chauves-souris Évoluées se soignent à chaque attaque.", "roles": [] },
+
+    { "id": "fire-spirit", "name": "Esprit de feu", "variant": "normal", "baseCard": "fire-spirit", "elixir": 1, "rarity": "common", "category": "troop", "image": "cards-150/fire-spirit.png", "description": "Ces trois esprits de feu ont la mission kamikaze de vous faire un câlin brûlant.", "roles": [] },
+    { "id": "ice-spirit", "name": "Esprit de glace", "variant": "normal", "baseCard": "ice-spirit", "elixir": 1, "rarity": "common", "category": "troop", "image": "cards-150/ice-spirit.png", "description": "Cette boule de glace kamikaze gèle un groupe d'ennemis pendant 2 secondes.", "roles": [] },
+    { "id": "electro-spirit", "name": "Esprit électro", "variant": "normal", "baseCard": "electro-spirit", "elixir": 1, "rarity": "common", "category": "troop", "image": "cards-150/electro-spirit.png", "description": "Un esprit qui inflige des dégâts et étourdit les ennemis dans une petite zone.", "roles": [] },
+    { "id": "heal-spirit", "name": "Esprit guérisseur", "variant": "normal", "baseCard": "heal-spirit", "elixir": 1, "rarity": "rare", "category": "troop", "image": "cards-150/heal-spirit.png", "description": "Un esprit qui soigne les troupes alliées à proximité.", "roles": [] },
+
+    { "id": "barbarians", "name": "Barbares", "variant": "normal", "baseCard": "barbarians", "elixir": 5, "rarity": "common", "category": "troop", "image": "cards-150/barbarians.png", "description": "Cinq barbares robustes.", "roles": [] },
+    { "id": "barbarians-evo", "name": "Barbares Évolués", "variant": "evolution", "baseCard": "barbarians", "elixir": 5, "rarity": "common", "category": "troop", "image": "cards-150/barbarians-ev1.png", "description": "Pendant 2 cycles, les Barbares Évolués gagnent de la vitesse et des dégâts.", "roles": [] },
+    { "id": "elite-barbarians", "name": "Barbares d'élite", "variant": "normal", "baseCard": "elite-barbarians", "elixir": 6, "rarity": "common", "category": "troop", "image": "cards-150/elite-barbarians.png", "description": "Fait apparaître une paire de barbares au niveau boosté.", "roles": [] },
+
+    { "id": "minions", "name": "Minions", "variant": "normal", "baseCard": "minions", "elixir": 3, "rarity": "common", "category": "troop", "image": "cards-150/minions.png", "description": "Trois créatures volantes qui attaquent rapidement.", "roles": [] },
+    { "id": "minion-horde", "name": "Horde de Minions", "variant": "normal", "baseCard": "minion-horde", "elixir": 5, "rarity": "common", "category": "troop", "image": "cards-150/minion-horde.png", "description": "Six minions qui attaquent en groupe.", "roles": [] },
+    { "id": "minion-horde-evo", "name": "Horde de Minions Évoluée", "variant": "evolution", "baseCard": "minion-horde", "elixir": 5, "rarity": "common", "category": "troop", "image": "cards-150/minion-horde-ev1.png", "description": "Pendant 2 cycles, les Minions Évolués sont plus résistants.", "roles": [] },
+
+    { "id": "royal-giant", "name": "Géant Royal", "variant": "normal", "baseCard": "royal-giant", "elixir": 6, "rarity": "common", "category": "troop", "image": "cards-150/royal-giant.png", "description": "Un géant qui cible uniquement les bâtiments avec son canon à longue portée.", "roles": ["win_condition"] },
+    { "id": "royal-giant-evo", "name": "Géant Royal Évolué", "variant": "evolution", "baseCard": "royal-giant", "elixir": 6, "rarity": "common", "category": "troop", "image": "cards-150/royal-giant-ev1.png", "description": "Pendant 1 cycle, ses tirs créent une onde de choc.", "roles": ["win_condition"] },
+
+    { "id": "royal-recruits", "name": "Recrues Royales", "variant": "normal", "baseCard": "royal-recruits", "elixir": 7, "rarity": "common", "category": "troop", "image": "cards-150/royal-recruits.png", "description": "Six combattants terrestres avec boucliers.", "roles": [] },
+    { "id": "royal-recruits-evo", "name": "Recrues Royales Évoluées", "variant": "evolution", "baseCard": "royal-recruits", "elixir": 7, "rarity": "common", "category": "troop", "image": "cards-150/royal-recruits-ev1.png", "description": "Pendant 1 cycle, les Recrues Évoluées chargent avec des dégâts doublés.", "roles": [] },
+
+    { "id": "rascals", "name": "Vauriens", "variant": "normal", "baseCard": "rascals", "elixir": 5, "rarity": "common", "category": "troop", "image": "cards-150/rascals.png", "description": "Un trio de combattants : un garçon robuste et deux filles avec des frondes.", "roles": [] },
+
+    { "id": "mortar", "name": "Mortier", "variant": "normal", "baseCard": "mortar", "elixir": 4, "rarity": "common", "category": "building", "image": "cards-150/mortar.png", "description": "Un bâtiment de siège qui tire des obus sur les tours ennemies à longue portée.", "roles": ["win_condition", "siege"] },
+    { "id": "mortar-evo", "name": "Mortier Évolué", "variant": "evolution", "baseCard": "mortar", "elixir": 4, "rarity": "common", "category": "building", "image": "cards-150/mortar-ev1.png", "description": "Pendant 2 cycles, le Mortier Évolué tire des obus qui rebondissent.", "roles": ["win_condition", "siege"] },
+
+    { "id": "cannon", "name": "Canon", "variant": "normal", "baseCard": "cannon", "elixir": 3, "rarity": "common", "category": "building", "image": "cards-150/cannon.png", "description": "Un bâtiment défensif qui cible les troupes terrestres à moyenne portée.", "roles": ["building"] },
+    { "id": "cannon-evo", "name": "Canon Évolué", "variant": "evolution", "baseCard": "cannon", "elixir": 3, "rarity": "common", "category": "building", "image": "cards-150/cannon-ev1.png", "description": "Pendant 2 cycles, le Canon Évolué tire des boulets explosifs.", "roles": ["building"] },
+
+    { "id": "tesla", "name": "Tesla", "variant": "normal", "baseCard": "tesla", "elixir": 4, "rarity": "common", "category": "building", "image": "cards-150/tesla.png", "description": "Un bâtiment défensif qui cible les unités terrestres et aériennes.", "roles": ["air_defense", "building"] },
+    { "id": "tesla-evo", "name": "Tesla Évoluée", "variant": "evolution", "baseCard": "tesla", "elixir": 4, "rarity": "common", "category": "building", "image": "cards-150/tesla-ev1.png", "description": "Pendant 2 cycles, la Tesla Évoluée crée des arcs électriques.", "roles": ["air_defense", "building"] },
+
+    { "id": "arrows", "name": "Flèches", "variant": "normal", "baseCard": "arrows", "elixir": 3, "rarity": "common", "category": "spell", "image": "cards-150/arrows.png", "description": "Un sort qui pleut des flèches sur une zone.", "roles": ["spell"] },
+    { "id": "zap", "name": "Zap", "variant": "normal", "baseCard": "zap", "elixir": 2, "rarity": "common", "category": "spell", "image": "cards-150/zap.png", "description": "Un petit sort qui inflige des dégâts et étourdit brièvement les ennemis.", "roles": ["spell", "small_spell"] },
+    { "id": "zap-evo", "name": "Zap Évolué", "variant": "evolution", "baseCard": "zap", "elixir": 2, "rarity": "common", "category": "spell", "image": "cards-150/zap-ev1.png", "description": "Pendant 2 cycles, le Zap Évolué étourdit les ennemis plus longtemps.", "roles": ["spell", "small_spell"] },
+    { "id": "giant-snowball", "name": "Boule de neige géante", "variant": "normal", "baseCard": "giant-snowball", "elixir": 2, "rarity": "common", "category": "spell", "image": "cards-150/giant-snowball.png", "description": "Un sort qui ralentit et repousse légèrement les ennemis.", "roles": ["spell", "small_spell"] },
+    { "id": "royal-delivery", "name": "Livraison Royale", "variant": "normal", "baseCard": "royal-delivery", "elixir": 3, "rarity": "common", "category": "spell", "image": "cards-150/royal-delivery.png", "description": "Un sort qui largue un Recrue Royale et inflige des dégâts de zone.", "roles": [] },
+
+    { "id": "royal-hogs", "name": "Cochons Royaux", "variant": "normal", "baseCard": "royal-hogs", "elixir": 5, "rarity": "rare", "category": "troop", "image": "cards-150/royal-hogs.png", "description": "Quatre cochons qui chargent vers les bâtiments ennemis.", "roles": ["win_condition"] },
+    { "id": "royal-hogs-evo", "name": "Cochons Royaux Évolués", "variant": "evolution", "baseCard": "royal-hogs", "elixir": 5, "rarity": "rare", "category": "troop", "image": "cards-150/royal-hogs-ev1.png", "description": "Pendant 2 cycles, les Cochons Royaux Évolués laissent une traînée de rage.", "roles": ["win_condition"] },
+
+    { "id": "hog-rider", "name": "Chevaucheur de cochon", "variant": "normal", "baseCard": "hog-rider", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/hog-rider.png", "description": "Un cavalier rapide qui saute par-dessus la rivière et cible uniquement les bâtiments.", "roles": ["win_condition"] },
+
+    { "id": "battle-ram", "name": "Bélier de combat", "variant": "normal", "baseCard": "battle-ram", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/battle-ram.png", "description": "Un bélier qui charge vers les bâtiments.", "roles": ["win_condition"] },
+    { "id": "battle-ram-evo", "name": "Bélier de combat Évolué", "variant": "evolution", "baseCard": "battle-ram", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/battle-ram-ev1.png", "description": "Pendant 2 cycles, le Bélier Évolué libère plus de Barbares.", "roles": ["win_condition"] },
+
+    { "id": "valkyrie", "name": "Valkyrie", "variant": "normal", "baseCard": "valkyrie", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/valkyrie.png", "description": "Une guerrière qui inflige des dégâts de zone autour d'elle.", "roles": ["defense", "splash"] },
+    { "id": "valkyrie-evo", "name": "Valkyrie Évoluée", "variant": "evolution", "baseCard": "valkyrie", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/valkyrie-ev1.png", "description": "Pendant 2 cycles, la Valkyrie Évoluée inflige des dégâts de zone plus importants.", "roles": ["defense", "splash"] },
+    { "id": "valkyrie-hero", "name": "Valkyrie Héroïque", "variant": "hero", "baseCard": "valkyrie", "elixir": 4, "rarity": "hero", "category": "hero", "image": "cards-150/valkyrie-hero.png", "description": "Version héroïque de la Valkyrie.", "roles": ["defense"] },
+
+    { "id": "musketeer", "name": "Mousquetaire", "variant": "normal", "baseCard": "musketeer", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/musketeer.png", "description": "Une tireuse d'élite à longue portée.", "roles": ["air_defense"] },
+    { "id": "musketeer-evo", "name": "Mousquetaire Évoluée", "variant": "evolution", "baseCard": "musketeer", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/musketeer-ev1.png", "description": "Pendant 2 cycles, la Mousquetaire Évoluée tire des balles perforantes.", "roles": ["air_defense"] },
+    { "id": "musketeer-hero", "name": "Mousquetaire Héroïque", "variant": "hero", "baseCard": "musketeer", "elixir": 4, "rarity": "hero", "category": "hero", "image": "cards-150/musketeer-hero.png", "description": "Version héroïque de la Mousquetaire.", "roles": ["air_defense"] },
+
+    { "id": "three-musketeers", "name": "Trois Mousquetaires", "variant": "normal", "baseCard": "three-musketeers", "elixir": 9, "rarity": "rare", "category": "troop", "image": "cards-150/three-musketeers.png", "description": "Trois Mousquetaires déployées en formation.", "roles": [] },
+
+    { "id": "wizard", "name": "Sorcier", "variant": "normal", "baseCard": "wizard", "elixir": 5, "rarity": "rare", "category": "troop", "image": "cards-150/wizard.png", "description": "Un lanceur de boules de feu qui inflige des dégâts de zone.", "roles": ["air_defense", "splash"] },
+    { "id": "wizard-evo", "name": "Sorcier Évolué", "variant": "evolution", "baseCard": "wizard", "elixir": 5, "rarity": "rare", "category": "troop", "image": "cards-150/wizard-ev1.png", "description": "Pendant 2 cycles, le Sorcier Évolué lance des boules de feu multiples.", "roles": ["air_defense", "splash"] },
+    { "id": "wizard-hero", "name": "Sorcier Héroïque", "variant": "hero", "baseCard": "wizard", "elixir": 5, "rarity": "hero", "category": "hero", "image": "cards-150/wizard-hero.png", "description": "Version héroïque du Sorcier.", "roles": ["air_defense"] },
+
+    { "id": "mini-pekka", "name": "Mini P.E.K.K.A", "variant": "normal", "baseCard": "mini-pekka", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/mini-pekka.png", "description": "Une version réduite du P.E.K.K.A, infligeant d'énormes dégâts à une seule cible.", "roles": ["tank_killer"] },
+    { "id": "mini-pekka-hero", "name": "Mini P.E.K.K.A Héroïque", "variant": "hero", "baseCard": "mini-pekka", "elixir": 4, "rarity": "hero", "category": "hero", "image": "cards-150/mini-pekka-hero.png", "description": "Version héroïque du Mini P.E.K.K.A.", "roles": ["tank_killer"] },
+
+    { "id": "giant", "name": "Géant", "variant": "normal", "baseCard": "giant", "elixir": 5, "rarity": "rare", "category": "troop", "image": "cards-150/giant.png", "description": "Un tank lent mais résistant qui cible uniquement les bâtiments.", "roles": ["win_condition", "tank"] },
+    { "id": "giant-hero", "name": "Géant Héroïque", "variant": "hero", "baseCard": "giant", "elixir": 5, "rarity": "hero", "category": "hero", "image": "cards-150/giant-hero.png", "description": "Version héroïque du Géant.", "roles": ["win_condition", "tank"] },
+
+    { "id": "giant-skeleton", "name": "Squelette Géant", "variant": "normal", "baseCard": "giant-skeleton", "elixir": 6, "rarity": "rare", "category": "troop", "image": "cards-150/giant-skeleton.png", "description": "Un squelette géant qui laisse une bombe dévastatrice à sa mort.", "roles": [] },
+
+    { "id": "dart-goblin", "name": "Gobelin à fléchettes", "variant": "normal", "baseCard": "dart-goblin", "elixir": 3, "rarity": "rare", "category": "troop", "image": "cards-150/dart-goblin.png", "description": "Un gobelin qui tire des fléchettes empoisonnées à longue portée.", "roles": [] },
+    { "id": "dart-goblin-evo", "name": "Gobelin à fléchettes Évolué", "variant": "evolution", "baseCard": "dart-goblin", "elixir": 3, "rarity": "rare", "category": "troop", "image": "cards-150/dart-goblin-ev1.png", "description": "Pendant 2 cycles, ses fléchettes empoisonnent les ennemis.", "roles": [] },
+
+    { "id": "berserker", "name": "Berserker", "variant": "normal", "baseCard": "berserker", "elixir": 2, "rarity": "rare", "category": "troop", "image": "cards-150/berserker.png", "description": "Son nom est tout à fait explicite !", "roles": [] },
+    { "id": "berserker-hero", "name": "Berserker Héroïque", "variant": "hero", "baseCard": "berserker", "elixir": 2, "rarity": "hero", "category": "hero", "image": "cards-150/berserker-hero.png", "description": "Version héroïque de la Berserker.", "roles": [] },
+
+    { "id": "rune-giant", "name": "Géant des Runes", "variant": "normal", "baseCard": "rune-giant", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/rune-giant.png", "description": "Un géant qui renforce les troupes alliées à proximité avec des runes.", "roles": ["win_condition", "tank"] },
+
+    { "id": "mega-minion", "name": "Méga Minion", "variant": "normal", "baseCard": "mega-minion", "elixir": 3, "rarity": "rare", "category": "troop", "image": "cards-150/mega-minion.png", "description": "Une version plus grosse et plus puissante du Minion.", "roles": [] },
+    { "id": "mega-minion-hero", "name": "Méga Minion Héroïque", "variant": "hero", "baseCard": "mega-minion", "elixir": 3, "rarity": "hero", "category": "hero", "image": "cards-150/mega-minion-hero.png", "description": "Version héroïque du Méga Minion.", "roles": [] },
+
+    { "id": "flying-machine", "name": "Machine Volante", "variant": "normal", "baseCard": "flying-machine", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/flying-machine.png", "description": "Une machine volante qui tire des projectiles à longue portée.", "roles": [] },
+
+    { "id": "zappies", "name": "Zappies", "variant": "normal", "baseCard": "zappies", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/zappies.png", "description": "Trois petites machines qui tirent des éclairs étourdissants.", "roles": [] },
+
+    { "id": "battle-healer", "name": "Guérisseuse de combat", "variant": "normal", "baseCard": "battle-healer", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/battle-healer.png", "description": "Avec chaque attaque, elle libère une puissante aura de soin.", "roles": [] },
+
+    { "id": "elixir-golem", "name": "Golem d'élixir", "variant": "normal", "baseCard": "elixir-golem", "elixir": 3, "rarity": "rare", "category": "troop", "image": "cards-150/elixir-golem.png", "description": "Un golem qui donne de l'élixir à l'adversaire quand il est détruit.", "roles": [] },
+
+    { "id": "suspicious-bush", "name": "Buisson suspect", "variant": "normal", "baseCard": "suspicious-bush", "elixir": 2, "rarity": "rare", "category": "troop", "image": "cards-150/suspicious-bush.png", "description": "Un buisson qui rampe vers les bâtiments ennemis, invisible aux troupes.", "roles": [] },
+
+    { "id": "goblin-demolisher", "name": "Démolisseur Gobelin", "variant": "normal", "baseCard": "goblin-demolisher", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/goblin-demolisher.png", "description": "Un gobelin qui lance des barils explosifs sur les bâtiments ennemis.", "roles": [] },
+
+    { "id": "bomb-tower", "name": "Tour à bombes", "variant": "normal", "baseCard": "bomb-tower", "elixir": 4, "rarity": "rare", "category": "building", "image": "cards-150/bomb-tower.png", "description": "Un bâtiment défensif qui lance des bombes infligeant des dégâts de zone.", "roles": ["building", "splash"] },
+
+    { "id": "inferno-tower", "name": "Tour infernale", "variant": "normal", "baseCard": "inferno-tower", "elixir": 5, "rarity": "rare", "category": "building", "image": "cards-150/inferno-tower.png", "description": "Un bâtiment qui inflige des dégâts croissants à une seule cible.", "roles": ["air_defense", "building", "tank_killer"] },
+
+    { "id": "goblin-cage", "name": "Cage à Gobelins", "variant": "normal", "baseCard": "goblin-cage", "elixir": 4, "rarity": "rare", "category": "building", "image": "cards-150/goblin-cage.png", "description": "Un bâtiment qui emprisonne un Gobelin Broyeur, libéré à sa destruction.", "roles": ["building"] },
+    { "id": "goblin-cage-evo", "name": "Cage à Gobelins Évoluée", "variant": "evolution", "baseCard": "goblin-cage", "elixir": 4, "rarity": "rare", "category": "building", "image": "cards-150/goblin-cage-ev1.png", "description": "Pendant 2 cycles, la Cage Évoluée libère un Gobelin Broyeur plus puissant.", "roles": ["building"] },
+
+    { "id": "tombstone", "name": "Pierre tombale", "variant": "normal", "baseCard": "tombstone", "elixir": 3, "rarity": "rare", "category": "building", "image": "cards-150/tombstone.png", "description": "Une pierre tombale qui génère des squelettes en continu.", "roles": ["building"] },
+    { "id": "tombstone-hero", "name": "Pierre tombale Héroïque", "variant": "hero", "baseCard": "tombstone", "elixir": 3, "rarity": "hero", "category": "hero", "image": "cards-150/tombstone-hero.png", "description": "Version héroïque de la Pierre tombale.", "roles": ["building"] },
+
+    { "id": "goblin-hut", "name": "Cabane de Gobelins", "variant": "normal", "baseCard": "goblin-hut", "elixir": 5, "rarity": "rare", "category": "building", "image": "cards-150/goblin-hut.png", "description": "Une cabane qui génère des Gobelins à lances en continu.", "roles": [] },
+
+    { "id": "barbarian-hut", "name": "Cabane de Barbares", "variant": "normal", "baseCard": "barbarian-hut", "elixir": 7, "rarity": "rare", "category": "building", "image": "cards-150/barbarian-hut.png", "description": "Une cabane qui génère des Barbares en continu.", "roles": [] },
+
+    { "id": "furnace", "name": "Fournaise", "variant": "normal", "baseCard": "furnace", "elixir": 4, "rarity": "rare", "category": "building", "image": "cards-150/furnace.png", "description": "Une fournaise qui génère des Esprits de feu en continu.", "roles": [] },
+
+    { "id": "elixir-collector", "name": "Collecteur d'élixir", "variant": "normal", "baseCard": "elixir-collector", "elixir": 6, "rarity": "rare", "category": "building", "image": "cards-150/elixir-collector.png", "description": "Un bâtiment qui génère de l'élixir supplémentaire au fil du temps.", "roles": [] },
+
+    { "id": "fireball", "name": "Boule de feu", "variant": "normal", "baseCard": "fireball", "elixir": 4, "rarity": "rare", "category": "spell", "image": "cards-150/fireball.png", "description": "Un sort qui inflige des dégâts de zone et repousse légèrement les ennemis.", "roles": ["spell", "medium_spell"] },
+
+    { "id": "rocket", "name": "Fusée", "variant": "normal", "baseCard": "rocket", "elixir": 6, "rarity": "rare", "category": "spell", "image": "cards-150/rocket.png", "description": "Un sort dévastateur qui inflige d'énormes dégâts dans une zone.", "roles": ["spell", "heavy_spell"] },
+
+    { "id": "earthquake", "name": "Tremblement de terre", "variant": "normal", "baseCard": "earthquake", "elixir": 3, "rarity": "rare", "category": "spell", "image": "cards-150/earthquake.png", "description": "Un sort qui inflige des dégâts sur la durée et ralentit les troupes et bâtiments.", "roles": ["spell", "building_counter"] },
+
+    { "id": "witch", "name": "Sorcière", "variant": "normal", "baseCard": "witch", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/witch.png", "description": "Une sorcière qui invoque des squelettes et lance des projectiles magiques.", "roles": [] },
+    { "id": "witch-evo", "name": "Sorcière Évoluée", "variant": "evolution", "baseCard": "witch", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/witch-ev1.png", "description": "Pendant 2 cycles, la Sorcière Évoluée invoque des squelettes plus puissants.", "roles": [] },
+
+    { "id": "baby-dragon", "name": "Bébé Dragon", "variant": "normal", "baseCard": "baby-dragon", "elixir": 4, "rarity": "epic", "category": "troop", "image": "cards-150/baby-dragon.png", "description": "Un dragon volant qui inflige des dégâts de zone.", "roles": ["air_defense", "splash"] },
+    { "id": "baby-dragon-evo", "name": "Bébé Dragon Évolué", "variant": "evolution", "baseCard": "baby-dragon", "elixir": 4, "rarity": "epic", "category": "troop", "image": "cards-150/baby-dragon-ev1.png", "description": "Pendant 2 cycles, le Bébé Dragon Évolué inflige des dégâts de zone plus importants.", "roles": ["air_defense", "splash"] },
+
+    { "id": "prince", "name": "Prince", "variant": "normal", "baseCard": "prince", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/prince.png", "description": "Un chevalier monté qui charge après un certain temps.", "roles": [] },
+
+    { "id": "dark-prince", "name": "Prince des ténèbres", "variant": "normal", "baseCard": "dark-prince", "elixir": 4, "rarity": "epic", "category": "troop", "image": "cards-150/dark-prince.png", "description": "Un prince avec un bouclier qui inflige des dégâts de zone.", "roles": [] },
+    { "id": "dark-prince-hero", "name": "Prince des ténèbres Héroïque", "variant": "hero", "baseCard": "dark-prince", "elixir": 4, "rarity": "hero", "category": "hero", "image": "cards-150/dark-prince-hero.png", "description": "Version héroïque du Prince des ténèbres.", "roles": [] },
+
+    { "id": "bowler", "name": "Bowler", "variant": "normal", "baseCard": "bowler", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/bowler.png", "description": "Une créature qui lance des rochers roulants, repoussant les troupes ennemies.", "roles": [] },
+    { "id": "bowler-hero", "name": "Bowler Héroïque", "variant": "hero", "baseCard": "bowler", "elixir": 5, "rarity": "hero", "category": "hero", "image": "cards-150/bowler-hero.png", "description": "Version héroïque du Bowler.", "roles": [] },
+
+    { "id": "executioner", "name": "Exécuteur", "variant": "normal", "baseCard": "executioner", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/executioner.png", "description": "Un combattant qui lance une hache tournoyante infligeant des dégâts de zone.", "roles": ["air_defense", "splash"] },
+    { "id": "executioner-evo", "name": "Exécuteur Évolué", "variant": "evolution", "baseCard": "executioner", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/executioner-ev1.png", "description": "Pendant 2 cycles, la hache de l'Exécuteur Évolué inflige des dégâts supplémentaires.", "roles": ["air_defense", "splash"] },
+
+    { "id": "hunter", "name": "Chasseur", "variant": "normal", "baseCard": "hunter", "elixir": 4, "rarity": "epic", "category": "troop", "image": "cards-150/hunter.png", "description": "Un tireur au fusil à pompe infligeant d'énormes dégâts à courte portée.", "roles": ["air_defense", "tank_killer"] },
+    { "id": "hunter-evo", "name": "Chasseur Évolué", "variant": "evolution", "baseCard": "hunter", "elixir": 4, "rarity": "epic", "category": "troop", "image": "cards-150/hunter-ev1.png", "description": "Pendant 2 cycles, le Chasseur Évolué tire plus de projectiles.", "roles": ["air_defense", "tank_killer"] },
+
+    { "id": "wall-breakers", "name": "Casse-briques", "variant": "normal", "baseCard": "wall-breakers", "elixir": 2, "rarity": "epic", "category": "troop", "image": "cards-150/wall-breakers.png", "description": "Deux squelettes qui courent vers les bâtiments et explosent à l'impact.", "roles": ["win_condition", "cycle"] },
+    { "id": "wall-breakers-evo", "name": "Casse-briques Évolués", "variant": "evolution", "baseCard": "wall-breakers", "elixir": 2, "rarity": "epic", "category": "troop", "image": "cards-150/wall-breakers-ev1.png", "description": "Pendant 2 cycles, les Casse-briques Évolués infligent plus de dégâts d'explosion.", "roles": ["win_condition", "cycle"] },
+
+    { "id": "goblin-giant", "name": "Géant Gobelin", "variant": "normal", "baseCard": "goblin-giant", "elixir": 6, "rarity": "epic", "category": "troop", "image": "cards-150/goblin-giant.png", "description": "Un géant avec un gobelin à lances sur le dos.", "roles": ["win_condition", "tank"] },
+    { "id": "goblin-giant-evo", "name": "Géant Gobelin Évolué", "variant": "evolution", "baseCard": "goblin-giant", "elixir": 6, "rarity": "epic", "category": "troop", "image": "cards-150/goblin-giant-ev1.png", "description": "Pendant 2 cycles, le Géant Gobelin Évolué est plus résistant.", "roles": ["win_condition", "tank"] },
+
+    { "id": "skeleton-barrel", "name": "Tonneau squelettique", "variant": "normal", "baseCard": "skeleton-barrel", "elixir": 3, "rarity": "epic", "category": "troop", "image": "cards-150/skeleton-barrel.png", "description": "Un tonneau volant qui libère des squelettes à sa destruction.", "roles": [] },
+    { "id": "skeleton-barrel-evo", "name": "Tonneau squelettique Évolué", "variant": "evolution", "baseCard": "skeleton-barrel", "elixir": 3, "rarity": "epic", "category": "troop", "image": "cards-150/skeleton-barrel-ev1.png", "description": "Pendant 2 cycles, le Tonneau Évolué libère un tonneau supplémentaire.", "roles": [] },
+
+    { "id": "goblin-drill", "name": "Foreuse Gobeline", "variant": "normal", "baseCard": "goblin-drill", "elixir": 4, "rarity": "epic", "category": "troop", "image": "cards-150/goblin-drill.png", "description": "Une foreuse qui surgit n'importe où dans l'arène et libère des Gobelins.", "roles": ["win_condition"] },
+    { "id": "goblin-drill-evo", "name": "Foreuse Gobeline Évoluée", "variant": "evolution", "baseCard": "goblin-drill", "elixir": 4, "rarity": "epic", "category": "troop", "image": "cards-150/goblin-drill-ev1.png", "description": "Pendant 2 cycles, la Foreuse Évoluée libère des Gobelins plus puissants.", "roles": ["win_condition"] },
+
+    { "id": "electro-dragon", "name": "Dragon Électrique", "variant": "normal", "baseCard": "electro-dragon", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/electro-dragon.png", "description": "Un dragon volant qui tire des éclairs en chaîne.", "roles": [] },
+    { "id": "electro-dragon-evo", "name": "Dragon Électrique Évolué", "variant": "evolution", "baseCard": "electro-dragon", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/electro-dragon-ev1.png", "description": "Pendant 2 cycles, le Dragon Électrique Évolué étourdit plus longtemps.", "roles": [] },
+
+    { "id": "cannon-cart", "name": "Canon roulant", "variant": "normal", "baseCard": "cannon-cart", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/cannon-cart.png", "description": "Un canon monté sur roues qui peut se déplacer.", "roles": [] },
+
+    { "id": "pekka", "name": "P.E.K.K.A", "variant": "normal", "baseCard": "pekka", "elixir": 7, "rarity": "epic", "category": "troop", "image": "cards-150/pekka.png", "description": "Une machine de guerre lente mais extrêmement puissante.", "roles": ["tank"] },
+    { "id": "pekka-evo", "name": "P.E.K.K.A Évoluée", "variant": "evolution", "baseCard": "pekka", "elixir": 7, "rarity": "epic", "category": "troop", "image": "cards-150/pekka-ev1.png", "description": "Pendant 2 cycles, la P.E.K.K.A Évoluée se soigne à chaque élimination.", "roles": ["tank"] },
+
+    { "id": "golem", "name": "Golem", "variant": "normal", "baseCard": "golem", "elixir": 8, "rarity": "epic", "category": "troop", "image": "cards-150/golem.png", "description": "Un tank massif qui se divise en Golemites à sa destruction.", "roles": ["win_condition", "tank"] },
+
+    { "id": "x-bow", "name": "Arbalète", "variant": "normal", "baseCard": "x-bow", "elixir": 6, "rarity": "epic", "category": "building", "image": "cards-150/x-bow.png", "description": "Un bâtiment de siège qui tire des flèches sur les tours ennemies à très longue portée.", "roles": ["win_condition", "siege"] },
+
+    { "id": "tornado", "name": "Tornade", "variant": "normal", "baseCard": "tornado", "elixir": 3, "rarity": "epic", "category": "spell", "image": "cards-150/tornado.png", "description": "Un sort qui aspire les troupes ennemies vers son centre.", "roles": ["control"] },
+
+    { "id": "freeze", "name": "Gel", "variant": "normal", "baseCard": "freeze", "elixir": 4, "rarity": "epic", "category": "spell", "image": "cards-150/freeze.png", "description": "Un sort qui gèle toutes les troupes et bâtiments ennemis dans une zone.", "roles": ["control"] },
+
+    { "id": "poison", "name": "Poison", "variant": "normal", "baseCard": "poison", "elixir": 4, "rarity": "epic", "category": "spell", "image": "cards-150/poison.png", "description": "Un sort qui inflige des dégâts sur la durée dans une zone.", "roles": ["spell"] },
+
+    { "id": "lightning", "name": "Foudre", "variant": "normal", "baseCard": "lightning", "elixir": 6, "rarity": "epic", "category": "spell", "image": "cards-150/lightning.png", "description": "Un sort qui frappe les 3 ennemis avec le plus de PV.", "roles": ["spell", "heavy_spell"] },
+
+    { "id": "rage", "name": "Rage", "variant": "normal", "baseCard": "rage", "elixir": 2, "rarity": "epic", "category": "spell", "image": "cards-150/rage.png", "description": "Un sort qui augmente la vitesse de déplacement et d'attaque des troupes alliées.", "roles": ["spell"] },
+
+    { "id": "clone", "name": "Clonage", "variant": "normal", "baseCard": "clone", "elixir": 3, "rarity": "epic", "category": "spell", "image": "cards-150/clone.png", "description": "Un sort qui clone les troupes alliées dans une zone.", "roles": ["spell"] },
+
+    { "id": "mirror", "name": "Miroir", "variant": "normal", "baseCard": "mirror", "elixir": 1, "rarity": "epic", "category": "spell", "image": "cards-150/mirror.png", "description": "Un sort qui rejoue la dernière carte jouée pour +1 élixir.", "roles": ["spell"] },
+
+    { "id": "barbarian-barrel", "name": "Tonneau de Barbares", "variant": "normal", "baseCard": "barbarian-barrel", "elixir": 2, "rarity": "epic", "category": "spell", "image": "cards-150/barbarian-barrel.png", "description": "Un tonneau qui roule et libère un Barbare à sa destruction.", "roles": ["spell", "small_spell"] },
+    { "id": "barbarian-barrel-hero", "name": "Tonneau de Barbares Héroïque", "variant": "hero", "baseCard": "barbarian-barrel", "elixir": 2, "rarity": "hero", "category": "hero", "image": "cards-150/barbarian-barrel-hero.png", "description": "Version héroïque du Tonneau de Barbares.", "roles": ["spell"] },
+
+    { "id": "goblin-barrel", "name": "Tonneau de Gobelins", "variant": "normal", "baseCard": "goblin-barrel", "elixir": 3, "rarity": "epic", "category": "spell", "image": "cards-150/goblin-barrel.png", "description": "Un tonneau qui atterrit n'importe où et libère trois Gobelins.", "roles": ["win_condition", "bait"] },
+    { "id": "goblin-barrel-evo", "name": "Tonneau de Gobelins Évolué", "variant": "evolution", "baseCard": "goblin-barrel", "elixir": 3, "rarity": "epic", "category": "spell", "image": "cards-150/goblin-barrel-ev1.png", "description": "Pendant 2 cycles, le Tonneau Évolué libère des Gobelins plus puissants.", "roles": ["win_condition", "bait"] },
+
+    { "id": "void", "name": "Vide", "variant": "normal", "baseCard": "void", "elixir": 3, "rarity": "epic", "category": "spell", "image": "cards-150/void.png", "description": "Un sort qui aspire les troupes ennemies et inflige des dégâts sur la durée.", "roles": ["spell"] },
+
+    { "id": "goblin-curse", "name": "Malédiction Gobeline", "variant": "normal", "baseCard": "goblin-curse", "elixir": 3, "rarity": "epic", "category": "spell", "image": "cards-150/goblin-curse.png", "description": "La malédiction gobeline transforme les troupes éliminées en gobelins.", "roles": ["spell"] },
+
+    { "id": "vines", "name": "Lianes", "variant": "normal", "baseCard": "vines", "elixir": 3, "rarity": "epic", "category": "spell", "image": "cards-150/vines.png", "description": "Un sort qui immobilise et inflige des dégâts aux troupes dans une zone.", "roles": ["spell"] },
+
+    { "id": "goblin-machine", "name": "Machine Gobeline", "variant": "normal", "baseCard": "goblin-machine", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/goblin-machine.png", "description": "La machine gobeline attaque de près et de loin.", "roles": [] },
+
+    { "id": "royal-ghost", "name": "Fantôme Royal", "variant": "normal", "baseCard": "royal-ghost", "elixir": 3, "rarity": "legendary", "category": "troop", "image": "cards-150/royal-ghost.png", "description": "Un fantôme qui devient invisible lorsqu'il ne combat pas.", "roles": [] },
+    { "id": "royal-ghost-evo", "name": "Fantôme Royal Évolué", "variant": "evolution", "baseCard": "royal-ghost", "elixir": 3, "rarity": "legendary", "category": "troop", "image": "cards-150/royal-ghost-ev1.png", "description": "Pendant 2 cycles, le Fantôme Évolué inflige des dégâts de zone.", "roles": [] },
+
+    { "id": "bandit", "name": "Bandit", "variant": "normal", "baseCard": "bandit", "elixir": 3, "rarity": "legendary", "category": "troop", "image": "cards-150/bandit.png", "description": "Une voleuse qui charge sur les ennemis avec un bouclier d'invincibilité.", "roles": [] },
+
+    { "id": "princess", "name": "Princesse", "variant": "normal", "baseCard": "princess", "elixir": 3, "rarity": "legendary", "category": "troop", "image": "cards-150/princess.png", "description": "Une archère à très longue portée qui inflige des dégâts de zone.", "roles": [] },
+
+    { "id": "magic-archer", "name": "Archer Magique", "variant": "normal", "baseCard": "magic-archer", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/magic-archer.png", "description": "Un archer dont les flèches traversent les ennemis en ligne.", "roles": [] },
+    { "id": "magic-archer-hero", "name": "Archer Magique Héroïque", "variant": "hero", "baseCard": "magic-archer", "elixir": 4, "rarity": "hero", "category": "hero", "image": "cards-150/magic-archer-hero.png", "description": "Version héroïque de l'Archer Magique.", "roles": [] },
+
+    { "id": "lumberjack", "name": "Bûcheron", "variant": "normal", "baseCard": "lumberjack", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/lumberjack.png", "description": "Un bûcheron rapide qui laisse une fiole de Rage à sa mort.", "roles": [] },
+    { "id": "lumberjack-evo", "name": "Bûcheron Évolué", "variant": "evolution", "baseCard": "lumberjack", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/lumberjack-ev1.png", "description": "Pendant 2 cycles, le Bûcheron Évolué laisse une Rage plus puissante.", "roles": [] },
+
+    { "id": "inferno-dragon", "name": "Dragon Infernal", "variant": "normal", "baseCard": "inferno-dragon", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/inferno-dragon.png", "description": "Un dragon volant dont les dégâts augmentent progressivement.", "roles": ["air_defense", "tank_killer"] },
+    { "id": "inferno-dragon-evo", "name": "Dragon Infernal Évolué", "variant": "evolution", "baseCard": "inferno-dragon", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/inferno-dragon-ev1.png", "description": "Pendant 2 cycles, le Dragon Infernal Évolué inflige des dégâts de zone.", "roles": ["air_defense", "tank_killer"] },
+
+    { "id": "electro-wizard", "name": "Sorcier Électrique", "variant": "normal", "baseCard": "electro-wizard", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/electro-wizard.png", "description": "Un sorcier qui étourdit les ennemis avec ses éclairs.", "roles": ["air_defense", "reset"] },
+
+    { "id": "night-witch", "name": "Sorcière de la nuit", "variant": "normal", "baseCard": "night-witch", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/night-witch.png", "description": "Une sorcière qui invoque des Chauves-souris en continu.", "roles": [] },
+
+    { "id": "mother-witch", "name": "Mère Sorcière", "variant": "normal", "baseCard": "mother-witch", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/mother-witch.png", "description": "Une sorcière qui maudit les troupes ennemies.", "roles": [] },
+
+    { "id": "fisherman", "name": "Pêcheur", "variant": "normal", "baseCard": "fisherman", "elixir": 3, "rarity": "legendary", "category": "troop", "image": "cards-150/fisherman.png", "description": "Un pêcheur qui lance son harpon pour attirer les ennemis vers lui.", "roles": ["control"] },
+
+    { "id": "ram-rider", "name": "Chevaucheuse de bélier", "variant": "normal", "baseCard": "ram-rider", "elixir": 5, "rarity": "legendary", "category": "troop", "image": "cards-150/ram-rider.png", "description": "Une cavalière qui charge vers les bâtiments et ralentit les troupes.", "roles": ["win_condition"] },
+
+    { "id": "mega-knight", "name": "Méga Chevalier", "variant": "normal", "baseCard": "mega-knight", "elixir": 7, "rarity": "legendary", "category": "troop", "image": "cards-150/mega-knight.png", "description": "Un chevalier massif qui inflige des dégâts de zone.", "roles": ["tank"] },
+    { "id": "mega-knight-evo", "name": "Méga Chevalier Évolué", "variant": "evolution", "baseCard": "mega-knight", "elixir": 7, "rarity": "legendary", "category": "troop", "image": "cards-150/mega-knight-ev1.png", "description": "Pendant 2 cycles, le Méga Chevalier Évolué inflige plus de dégâts de zone.", "roles": ["tank"] },
+
+    { "id": "sparky", "name": "Sparky", "variant": "normal", "baseCard": "sparky", "elixir": 6, "rarity": "legendary", "category": "troop", "image": "cards-150/sparky.png", "description": "Une machine qui charge un tir dévastateur infligeant des dégâts de zone.", "roles": [] },
+
+    { "id": "lava-hound", "name": "Lave Hound", "variant": "normal", "baseCard": "lava-hound", "elixir": 7, "rarity": "legendary", "category": "troop", "image": "cards-150/lava-hound.png", "description": "Un tank volant qui se divise en plusieurs petits Lave Hounds.", "roles": ["win_condition", "tank", "air"] },
+
+    { "id": "miner", "name": "Mineur", "variant": "normal", "baseCard": "miner", "elixir": 3, "rarity": "legendary", "category": "troop", "image": "cards-150/miner.png", "description": "Un mineur qui peut être déployé n'importe où dans l'arène.", "roles": ["win_condition", "cycle"] },
+
+    { "id": "ice-wizard", "name": "Sorcier de glace", "variant": "normal", "baseCard": "ice-wizard", "elixir": 3, "rarity": "legendary", "category": "troop", "image": "cards-150/ice-wizard.png", "description": "Un sorcier qui ralentit les troupes ennemies avec ses projectiles de glace.", "roles": [] },
+    { "id": "ice-wizard-hero", "name": "Sorcier de glace Héroïque", "variant": "hero", "baseCard": "ice-wizard", "elixir": 3, "rarity": "hero", "category": "hero", "image": "cards-150/ice-wizard-hero.png", "description": "Version héroïque du Sorcier de glace.", "roles": [] },
+
+    { "id": "phoenix", "name": "Phénix", "variant": "normal", "baseCard": "phoenix", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/phoenix.png", "description": "Un oiseau de feu qui renaît de ses cendres après sa destruction.", "roles": [] },
+
+    { "id": "graveyard", "name": "Cimetière", "variant": "normal", "baseCard": "graveyard", "elixir": 5, "rarity": "legendary", "category": "spell", "image": "cards-150/graveyard.png", "description": "Un sort qui invoque des Squelettes en continu dans une zone.", "roles": ["win_condition"] },
+
+    { "id": "the-log", "name": "La Bûche", "variant": "normal", "baseCard": "the-log", "elixir": 2, "rarity": "legendary", "category": "spell", "image": "cards-150/the-log.png", "description": "Un tronc qui roule sur le sol, repoussant et infligeant des dégâts.", "roles": ["spell", "small_spell"] },
+
+    { "id": "spirit-empress", "name": "Impératrice des esprits", "variant": "normal", "baseCard": "spirit-empress", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/spirit-empress.png", "description": "Une impératrice qui invoque des esprits pour attaquer.", "roles": ["win_condition", "air"] },
+
+    { "id": "royal-chef", "name": "Chef Royal", "variant": "temporary", "baseCard": "royal-chef", "elixir": 3, "rarity": "legendary", "category": "troop", "image": "cards-150/royal-chef.png", "description": "Un chef qui prépare des plats pour renforcer les troupes alliées.", "roles": [] },
+
+    { "id": "monk", "name": "Moine", "variant": "champion", "baseCard": "monk", "elixir": 5, "rarity": "champion", "category": "troop", "image": "cards-150/monk.png", "description": "Un moine qui peut renvoyer les projectiles et les sorts.", "roles": ["champion"] },
+
+    { "id": "skeleton-king", "name": "Roi Squelette", "variant": "champion", "baseCard": "skeleton-king", "elixir": 4, "rarity": "champion", "category": "troop", "image": "cards-150/skeleton-king.png", "description": "Un roi squelette qui invoque des Squelettes en continu.", "roles": ["champion"] },
+
+    { "id": "archer-queen", "name": "Reine des Archers", "variant": "champion", "baseCard": "archer-queen", "elixir": 5, "rarity": "champion", "category": "troop", "image": "cards-150/archer-queen.png", "description": "Une reine qui peut activer un mode de camouflage.", "roles": ["champion"] },
+
+    { "id": "golden-knight", "name": "Chevalier Doré", "variant": "champion", "baseCard": "golden-knight", "elixir": 4, "rarity": "champion", "category": "troop", "image": "cards-150/golden-knight.png", "description": "Un guerrier à la chevelure aussi remarquable que sa souplesse.", "roles": ["champion"] },
+
+    { "id": "mighty-miner", "name": "Mineur Puissant", "variant": "champion", "baseCard": "mighty-miner", "elixir": 4, "rarity": "champion", "category": "troop", "image": "cards-150/mighty-miner.png", "description": "Un mineur champion qui peut creuser sous terre.", "roles": ["champion"] },
+
+    { "id": "little-prince", "name": "Petit Prince", "variant": "champion", "baseCard": "little-prince", "elixir": 3, "rarity": "champion", "category": "troop", "image": "cards-150/little-prince.png", "description": "Un jeune prince champion qui gagne en puissance au fil du temps.", "roles": ["champion"] },
+
+    { "id": "goblinstein", "name": "Goblinstein", "variant": "champion", "baseCard": "goblinstein", "elixir": 5, "rarity": "champion", "category": "troop", "image": "cards-150/goblinstein.png", "description": "Un champion gobelin monté sur une créature monstrueuse.", "roles": ["champion"] },
+
+    { "id": "tower-princess", "name": "Princesse de tour", "variant": "tower", "baseCard": "tower-princess", "elixir": 0, "rarity": "tower", "category": "tower", "image": "cards-150/tower-princess.png", "description": "La tour de couronne standard.", "roles": [] },
+    { "id": "cannoneer", "name": "Canonnière", "variant": "tower", "baseCard": "cannoneer", "elixir": 0, "rarity": "tower", "category": "tower", "image": "cards-150/cannoneer.png", "description": "Une tour de couronne qui tire des projectiles lourds.", "roles": [] },
+    { "id": "dagger-duchess", "name": "Duchesse des dagues", "variant": "tower", "baseCard": "dagger-duchess", "elixir": 0, "rarity": "tower", "category": "tower", "image": "cards-150/dagger-duchess.png", "description": "Une tour de couronne qui stocke des dagues pour tirer rapidement.", "roles": [] }
+
   ]
 }

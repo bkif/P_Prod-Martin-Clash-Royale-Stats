@@ -1,62 +1,57 @@
 async function displayCards() {
 
     const db = await loadDatabase();
+    if (!db) return;
 
-    if (!db) {
-        return;
-    }
-
-    const container =
-        document.getElementById("cards");
-
+    const container = document.getElementById("cards");
     container.innerHTML = "";
 
     db.cards.forEach(card => {
 
-        const element =
-            document.createElement("div");
-
-        element.className = "card";
+        const element = document.createElement("div");
+        element.className = `card rarity-${card.rarity} variant-${card.variant}`;
 
         element.innerHTML = `
+            <img
+                src="${card.image}"
+                alt="${card.name}"
+                class="card-image"
+                onerror="this.style.display='none'"
+            >
+
             <h2>${card.name}</h2>
 
-            <p>
-                Élixir :
-                <strong>${card.elixir}</strong>
-            </p>
+            ${badgeVariant(card.variant)}
 
-            <p>
-                Rareté :
-                ${card.rarity}
-            </p>
+            <p>💧 Élixir : <strong>${card.elixir}</strong></p>
+            <p>⭐ Rareté : ${card.rarity}</p>
+            <p>🎯 Type : ${card.category}</p>
 
-            <p>
-                Type :
-                ${card.category}
-            </p>
-
-            ${
-                card.isHero
-                ? `<p>🦸 Héros</p>`
+            ${card.roles && card.roles.length > 0
+                ? `<p>🛠️ ${card.roles.join(", ")}</p>`
                 : ""
             }
 
-            ${
-                card.hasEvolution
-                ? `<p>⚡ Évolution disponible</p>`
+            ${card.description
+                ? `<p class="card-description">${card.description}</p>`
                 : ""
             }
-
-            <p>
-                Rôles :
-                ${card.roles.join(", ")}
-            </p>
         `;
 
         container.appendChild(element);
-
     });
+}
+
+
+function badgeVariant(variant) {
+    switch (variant) {
+        case "evolution": return `<p class="badge badge-evo">⚡ Évolution</p>`;
+        case "hero":      return `<p class="badge badge-hero">🦸 Héros</p>`;
+        case "champion":  return `<p class="badge badge-champion">👑 Champion</p>`;
+        case "temporary": return `<p class="badge badge-temp">⏳ Temporaire</p>`;
+        case "tower":     return `<p class="badge badge-tower">🏰 Tour</p>`;
+        default:          return "";
+    }
 }
 
 

@@ -988,11 +988,23 @@ width: 300px;
   border: 2px solid #ff0000;
   border-radius: 15px;
   padding: 20px;
-  width: 250px;
+  width: 300px;
   color: #ffffff;
   font-family: "Bungee", sans-serif;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
 }
 
 .card h2 {
@@ -1002,6 +1014,47 @@ width: 300px;
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 15px;
+  margin: 5px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-description {
+  font-size: 13px;
+  color: #dddddd;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
   margin: 5px 0;
 }
+
+.badge-evo      { background: #00c8ff; color: #000; }
+.badge-hero     { background: #ff0066; color: #fff; }
+.badge-champion { background: #ffd700; color: #000; }
+.badge-temp     { background: #888; color: #fff; }
+.badge-tower    { background: #444; color: #fff; }
+
+.card.rarity-common    { border-color: #b0b0b0; }
+.card.rarity-rare      { border-color: #ff9900; }
+.card.rarity-epic      { border-color: #b020ff; }
+.card.rarity-legendary { border-color: #00e0ff; }
+.card.rarity-champion  { border-color: #ffd700; }
+.card.rarity-hero      { border-color: #ff0066; }
+.card.rarity-tower     { border-color: #666666; }
+
+.card.variant-evolution { box-shadow: 0 0 15px #00c8ff; }
+.card.variant-hero      { box-shadow: 0 0 15px #ff0066; }
+.card.variant-champion  { box-shadow: 0 0 15px #ffd700; }
+.card.variant-temporary { box-shadow: 0 0 15px #888; }
