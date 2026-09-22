@@ -1,0 +1,1836 @@
+{
+  "schemaVersion": "2.0",
+  "lastVerified": "2026-09-22",
+  "sourceNotes": [
+    "Card/feature coverage aligned with official Clash Royale updates available by 2026-09-22.",
+    "Hero variants are represented separately and linked to their base card.",
+    "Evolution availability is represented by hasEvolution; exact balance stats should be stored separately.",
+    "Usage/win-rate values are intentionally not hard-coded because they are live/period-dependent."
+  ],
+  "deckRules": {
+    "cardsPerDeck": 8,
+    "heroSlots": 1,
+    "evolutionSlots": 1,
+    "wildSlot": 1
+  },
+  "cards": [
+    {
+      "id": "knight",
+      "name": "Knight",
+      "elixir": 3,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "defense"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "archers",
+      "name": "Archers",
+      "elixir": 3,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "air_defense"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "goblins",
+      "name": "Goblins",
+      "elixir": 2,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "spear-goblins",
+      "name": "Spear Goblins",
+      "elixir": 2,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "skeletons",
+      "name": "Skeletons",
+      "elixir": 1,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "bomber",
+      "name": "Bomber",
+      "elixir": 2,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "bats",
+      "name": "Bats",
+      "elixir": 2,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "fire-spirit",
+      "name": "Fire Spirit",
+      "elixir": 1,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "ice-spirit",
+      "name": "Ice Spirit",
+      "elixir": 1,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "electro-spirit",
+      "name": "Electro Spirit",
+      "elixir": 1,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "barbarians",
+      "name": "Barbarians",
+      "elixir": 5,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "minions",
+      "name": "Minions",
+      "elixir": 3,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "minion-horde",
+      "name": "Minion Horde",
+      "elixir": 5,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "royal-giant",
+      "name": "Royal Giant",
+      "elixir": 6,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "royal-recruits",
+      "name": "Royal Recruits",
+      "elixir": 7,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "elite-barbarians",
+      "name": "Elite Barbarians",
+      "elixir": 6,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "rascals",
+      "name": "Rascals",
+      "elixir": 5,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "royal-hogs",
+      "name": "Royal Hogs",
+      "elixir": 5,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "hog-rider",
+      "name": "Hog Rider",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "battle-ram",
+      "name": "Battle Ram",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "valkyrie",
+      "name": "Valkyrie",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "defense",
+        "splash"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "musketeer",
+      "name": "Musketeer",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "air_defense"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "wizard",
+      "name": "Wizard",
+      "elixir": 5,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "air_defense",
+        "splash"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "mini-pekka",
+      "name": "Mini P.E.K.K.A",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "tank_killer"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "giant",
+      "name": "Giant",
+      "elixir": 5,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "tank"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "giant-skeleton",
+      "name": "Giant Skeleton",
+      "elixir": 6,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "witch",
+      "name": "Witch",
+      "elixir": 5,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "baby-dragon",
+      "name": "Baby Dragon",
+      "elixir": 4,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "air_defense",
+        "splash"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "prince",
+      "name": "Prince",
+      "elixir": 5,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "dark-prince",
+      "name": "Dark Prince",
+      "elixir": 4,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "bowler",
+      "name": "Bowler",
+      "elixir": 5,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "executioner",
+      "name": "Executioner",
+      "elixir": 5,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "air_defense",
+        "splash"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter",
+      "elixir": 4,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "air_defense",
+        "tank_killer"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "wall-breakers",
+      "name": "Wall Breakers",
+      "elixir": 2,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "cycle"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "goblin-giant",
+      "name": "Goblin Giant",
+      "elixir": 6,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "tank"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "skeleton-barrel",
+      "name": "Skeleton Barrel",
+      "elixir": 3,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "goblin-drill",
+      "name": "Goblin Drill",
+      "elixir": 4,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "electro-dragon",
+      "name": "Electro Dragon",
+      "elixir": 5,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "cannon-cart",
+      "name": "Cannon Cart",
+      "elixir": 5,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "pekka",
+      "name": "P.E.K.K.A",
+      "elixir": 7,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "tank"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "golem",
+      "name": "Golem",
+      "elixir": 8,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "tank"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "x-bow",
+      "name": "X-Bow",
+      "elixir": 6,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "siege"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "mortar",
+      "name": "Mortar",
+      "elixir": 4,
+      "rarity": "common",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "siege"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "flying-machine",
+      "name": "Flying Machine",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "zappies",
+      "name": "Zappies",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "three-musketeers",
+      "name": "Three Musketeers",
+      "elixir": 9,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "battle-healer",
+      "name": "Battle Healer",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "elixir-golem",
+      "name": "Elixir Golem",
+      "elixir": 3,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "royal-ghost",
+      "name": "Royal Ghost",
+      "elixir": 3,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "bandit",
+      "name": "Bandit",
+      "elixir": 3,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "princess",
+      "name": "Princess",
+      "elixir": 3,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "magic-archer",
+      "name": "Magic Archer",
+      "elixir": 4,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "lumberjack",
+      "name": "Lumberjack",
+      "elixir": 4,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "inferno-dragon",
+      "name": "Inferno Dragon",
+      "elixir": 4,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "air_defense",
+        "tank_killer"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "electro-wizard",
+      "name": "Electro Wizard",
+      "elixir": 4,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "air_defense",
+        "reset"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "night-witch",
+      "name": "Night Witch",
+      "elixir": 4,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "mother-witch",
+      "name": "Mother Witch",
+      "elixir": 4,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "fisherman",
+      "name": "Fisherman",
+      "elixir": 3,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "control"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "ram-rider",
+      "name": "Ram Rider",
+      "elixir": 5,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "mega-knight",
+      "name": "Mega Knight",
+      "elixir": 7,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "tank"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "sparky",
+      "name": "Sparky",
+      "elixir": 6,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "lava-hound",
+      "name": "Lava Hound",
+      "elixir": 7,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "tank",
+        "air"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "miner",
+      "name": "Miner",
+      "elixir": 3,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "cycle"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "ice-wizard",
+      "name": "Ice Wizard",
+      "elixir": 3,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "mega-minion",
+      "name": "Mega Minion",
+      "elixir": 3,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "phoenix",
+      "name": "Phoenix",
+      "elixir": 4,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "monk",
+      "name": "Monk",
+      "elixir": 5,
+      "rarity": "champion",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": true,
+      "roles": [
+        "champion"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "skeleton-king",
+      "name": "Skeleton King",
+      "elixir": 4,
+      "rarity": "champion",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": true,
+      "roles": [
+        "champion"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "archer-queen",
+      "name": "Archer Queen",
+      "elixir": 5,
+      "rarity": "champion",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": true,
+      "roles": [
+        "champion"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "golden-knight",
+      "name": "Golden Knight",
+      "elixir": 4,
+      "rarity": "champion",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": true,
+      "roles": [
+        "champion"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "mighty-miner",
+      "name": "Mighty Miner",
+      "elixir": 4,
+      "rarity": "champion",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": true,
+      "roles": [
+        "champion"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "little-prince",
+      "name": "Little Prince",
+      "elixir": 3,
+      "rarity": "champion",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": true,
+      "roles": [
+        "champion"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "goblinstein",
+      "name": "Goblinstein",
+      "elixir": 5,
+      "rarity": "champion",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": true,
+      "roles": [
+        "champion"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "goblin-machine",
+      "name": "Goblin Machine",
+      "elixir": 5,
+      "rarity": "epic",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "dart-goblin",
+      "name": "Dart Goblin",
+      "elixir": 3,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": true
+    },
+    {
+      "id": "berserker",
+      "name": "Berserker",
+      "elixir": 2,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "rune-giant",
+      "name": "Rune Giant",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "tank"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "spirit-empress",
+      "name": "Spirit Empress",
+      "elixir": 4,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "air"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "ronin",
+      "name": "Ronin",
+      "elixir": 4,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "suspicious-bush",
+      "name": "Suspicious Bush",
+      "elixir": 2,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "goblin-demolisher",
+      "name": "Goblin Demolisher",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "royal-chef",
+      "name": "Royal Chef",
+      "elixir": 3,
+      "rarity": "legendary",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "minion-giant",
+      "name": "Minion Giant",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "troop",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "air",
+        "tank"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "cannon",
+      "name": "Cannon",
+      "elixir": 3,
+      "rarity": "common",
+      "category": "building",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "building"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla",
+      "elixir": 4,
+      "rarity": "common",
+      "category": "building",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "air_defense",
+        "building"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "bomb-tower",
+      "name": "Bomb Tower",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "building",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "building",
+        "splash"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "inferno-tower",
+      "name": "Inferno Tower",
+      "elixir": 5,
+      "rarity": "rare",
+      "category": "building",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "air_defense",
+        "building",
+        "tank_killer"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "goblin-cage",
+      "name": "Goblin Cage",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "building",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "building"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "tombstone",
+      "name": "Tombstone",
+      "elixir": 3,
+      "rarity": "rare",
+      "category": "building",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "building"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "goblin-hut",
+      "name": "Goblin Hut",
+      "elixir": 5,
+      "rarity": "rare",
+      "category": "building",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "barbarian-hut",
+      "name": "Barbarian Hut",
+      "elixir": 7,
+      "rarity": "rare",
+      "category": "building",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "furnace",
+      "name": "Furnace",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "building",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "elixir-collector",
+      "name": "Elixir Collector",
+      "elixir": 6,
+      "rarity": "rare",
+      "category": "building",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "arrows",
+      "name": "Arrows",
+      "elixir": 3,
+      "rarity": "common",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "zap",
+      "name": "Zap",
+      "elixir": 2,
+      "rarity": "common",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell",
+        "small_spell",
+        "reset"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "giant-snowball",
+      "name": "Giant Snowball",
+      "elixir": 2,
+      "rarity": "common",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell",
+        "small_spell"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "fireball",
+      "name": "Fireball",
+      "elixir": 4,
+      "rarity": "rare",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell",
+        "medium_spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "rocket",
+      "name": "Rocket",
+      "elixir": 6,
+      "rarity": "rare",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell",
+        "heavy_spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "earthquake",
+      "name": "Earthquake",
+      "elixir": 3,
+      "rarity": "rare",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell",
+        "building_counter"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "the-log",
+      "name": "The Log",
+      "elixir": 2,
+      "rarity": "legendary",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell",
+        "small_spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "tornado",
+      "name": "Tornado",
+      "elixir": 3,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "control"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "freeze",
+      "name": "Freeze",
+      "elixir": 4,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "control"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "poison",
+      "name": "Poison",
+      "elixir": 4,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "lightning",
+      "name": "Lightning",
+      "elixir": 6,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell",
+        "heavy_spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "rage",
+      "name": "Rage",
+      "elixir": 2,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "clone",
+      "name": "Clone",
+      "elixir": 3,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "mirror",
+      "name": "Mirror",
+      "elixir": 1,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "barbarian-barrel",
+      "name": "Barbarian Barrel",
+      "elixir": 2,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell",
+        "small_spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "goblin-barrel",
+      "name": "Goblin Barrel",
+      "elixir": 3,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition",
+        "bait"
+      ],
+      "hasEvolution": true
+    },
+    {
+      "id": "graveyard",
+      "name": "Graveyard",
+      "elixir": 5,
+      "rarity": "legendary",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "win_condition"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "void",
+      "name": "Void",
+      "elixir": 3,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "goblin-curse",
+      "name": "Goblin Curse",
+      "elixir": 3,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "vines",
+      "name": "Vines",
+      "elixir": 3,
+      "rarity": "epic",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [
+        "spell"
+      ],
+      "hasEvolution": false
+    },
+    {
+      "id": "royal-delivery",
+      "name": "Royal Delivery",
+      "elixir": 3,
+      "rarity": "common",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "heal-spirit",
+      "name": "Heal Spirit",
+      "elixir": 1,
+      "rarity": "rare",
+      "category": "spell",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "tower-princess",
+      "name": "Tower Princess",
+      "elixir": 0,
+      "rarity": "tower",
+      "category": "tower",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "cannoneer",
+      "name": "Cannoneer",
+      "elixir": 0,
+      "rarity": "tower",
+      "category": "tower",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "dagger-duchess",
+      "name": "Dagger Duchess",
+      "elixir": 0,
+      "rarity": "tower",
+      "category": "tower",
+      "isHero": false,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-knight",
+      "name": "Hero Knight",
+      "elixir": 3,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Knight",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-valkyrie",
+      "name": "Hero Valkyrie",
+      "elixir": 4,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Valkyrie",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-musketeer",
+      "name": "Hero Musketeer",
+      "elixir": 4,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Musketeer",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-wizard",
+      "name": "Hero Wizard",
+      "elixir": 5,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Wizard",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-mini-pekka",
+      "name": "Hero Mini P.E.K.K.A",
+      "elixir": 4,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Mini P.E.K.K.A",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-dark-prince",
+      "name": "Hero Dark Prince",
+      "elixir": 4,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Dark Prince",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-berserker",
+      "name": "Hero Berserker",
+      "elixir": 2,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Berserker",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-barbarian-barrel",
+      "name": "Hero Barbarian Barrel",
+      "elixir": 2,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Barbarian Barrel",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-magic-archer",
+      "name": "Hero Magic Archer",
+      "elixir": 4,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Magic Archer",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-tombstone",
+      "name": "Hero Tombstone",
+      "elixir": 3,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Tombstone",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-balloon",
+      "name": "Hero Balloon",
+      "elixir": 5,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Balloon",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-goblins",
+      "name": "Hero Goblins",
+      "elixir": 2,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Goblins",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-mega-minion",
+      "name": "Hero Mega Minion",
+      "elixir": 3,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Mega Minion",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-bowler",
+      "name": "Hero Bowler",
+      "elixir": 5,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Bowler",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-giant",
+      "name": "Hero Giant",
+      "elixir": 5,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Giant",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-ice-golem",
+      "name": "Hero Ice Golem",
+      "elixir": 2,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Ice Golem",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    },
+    {
+      "id": "hero-ice-wizard",
+      "name": "Hero Ice Wizard",
+      "elixir": 3,
+      "rarity": "hero",
+      "category": "hero",
+      "isHero": true,
+      "isEvolution": false,
+      "isChampion": false,
+      "roles": [],
+      "baseCard": "Ice Wizard",
+      "ability": "Hero ability",
+      "hasEvolution": false
+    }
+  ]
+}
