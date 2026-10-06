@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "3.0",
-  "lastVerified": "2026-09-22",
+  "schemaVersion": "4.0",
+  "lastVerified": "2026-09-29",
   "notes": [
     "Champs en anglais, noms et descriptions en français",
     "Images locales depuis cards-150/",
@@ -33,7 +33,7 @@
     { "id": "bats", "name": "Chauves-souris", "variant": "normal", "baseCard": "bats", "elixir": 2, "rarity": "common", "category": "troop", "image": "cards-150/bats.png", "description": "Génère une poignée de petites créatures volantes.", "roles": [] },
     { "id": "bats-evo", "name": "Chauves-souris Évoluées", "variant": "evolution", "baseCard": "bats", "elixir": 2, "rarity": "common", "category": "troop", "image": "cards-150/bats-ev1.png", "description": "Pendant 2 cycles, les Chauves-souris Évoluées se soignent à chaque attaque.", "roles": [] },
 
-    { "id": "fire-spirit", "name": "Esprit de feu", "variant": "normal", "baseCard": "fire-spirit", "elixir": 1, "rarity": "common", "category": "troop", "image": "cards-150/fire-spirit.png", "description": "Ces trois esprits de feu ont la mission kamikaze de vous faire un câlin brûlant.", "roles": [] },
+    { "id": "fire-spirit", "name": "Esprit de feu", "variant": "normal", "baseCard": "fire-spirit", "elixir": 1, "rarity": "common", "category": "troop", "image": "cards-150/fire-spirit.png", "description": "Un esprit kamikaze qui inflige des dégâts de zone.", "roles": [] },
     { "id": "ice-spirit", "name": "Esprit de glace", "variant": "normal", "baseCard": "ice-spirit", "elixir": 1, "rarity": "common", "category": "troop", "image": "cards-150/ice-spirit.png", "description": "Cette boule de glace kamikaze gèle un groupe d'ennemis pendant 2 secondes.", "roles": [] },
     { "id": "electro-spirit", "name": "Esprit électro", "variant": "normal", "baseCard": "electro-spirit", "elixir": 1, "rarity": "common", "category": "troop", "image": "cards-150/electro-spirit.png", "description": "Un esprit qui inflige des dégâts et étourdit les ennemis dans une petite zone.", "roles": [] },
     { "id": "heal-spirit", "name": "Esprit guérisseur", "variant": "normal", "baseCard": "heal-spirit", "elixir": 1, "rarity": "rare", "category": "troop", "image": "cards-150/heal-spirit.png", "description": "Un esprit qui soigne les troupes alliées à proximité.", "roles": [] },
@@ -44,7 +44,6 @@
 
     { "id": "minions", "name": "Minions", "variant": "normal", "baseCard": "minions", "elixir": 3, "rarity": "common", "category": "troop", "image": "cards-150/minions.png", "description": "Trois créatures volantes qui attaquent rapidement.", "roles": [] },
     { "id": "minion-horde", "name": "Horde de Minions", "variant": "normal", "baseCard": "minion-horde", "elixir": 5, "rarity": "common", "category": "troop", "image": "cards-150/minion-horde.png", "description": "Six minions qui attaquent en groupe.", "roles": [] },
-    { "id": "minion-horde-evo", "name": "Horde de Minions Évoluée", "variant": "evolution", "baseCard": "minion-horde", "elixir": 5, "rarity": "common", "category": "troop", "image": "cards-150/minion-horde-ev1.png", "description": "Pendant 2 cycles, les Minions Évolués sont plus résistants.", "roles": [] },
 
     { "id": "royal-giant", "name": "Géant Royal", "variant": "normal", "baseCard": "royal-giant", "elixir": 6, "rarity": "common", "category": "troop", "image": "cards-150/royal-giant.png", "description": "Un géant qui cible uniquement les bâtiments avec son canon à longue portée.", "roles": ["win_condition"] },
     { "id": "royal-giant-evo", "name": "Géant Royal Évolué", "variant": "evolution", "baseCard": "royal-giant", "elixir": 6, "rarity": "common", "category": "troop", "image": "cards-150/royal-giant-ev1.png", "description": "Pendant 1 cycle, ses tirs créent une onde de choc.", "roles": ["win_condition"] },
@@ -67,7 +66,10 @@
     { "id": "zap", "name": "Zap", "variant": "normal", "baseCard": "zap", "elixir": 2, "rarity": "common", "category": "spell", "image": "cards-150/zap.png", "description": "Un petit sort qui inflige des dégâts et étourdit brièvement les ennemis.", "roles": ["spell", "small_spell"] },
     { "id": "zap-evo", "name": "Zap Évolué", "variant": "evolution", "baseCard": "zap", "elixir": 2, "rarity": "common", "category": "spell", "image": "cards-150/zap-ev1.png", "description": "Pendant 2 cycles, le Zap Évolué étourdit les ennemis plus longtemps.", "roles": ["spell", "small_spell"] },
     { "id": "giant-snowball", "name": "Boule de neige géante", "variant": "normal", "baseCard": "giant-snowball", "elixir": 2, "rarity": "common", "category": "spell", "image": "cards-150/giant-snowball.png", "description": "Un sort qui ralentit et repousse légèrement les ennemis.", "roles": ["spell", "small_spell"] },
-    { "id": "royal-delivery", "name": "Livraison Royale", "variant": "normal", "baseCard": "royal-delivery", "elixir": 3, "rarity": "common", "category": "spell", "image": "cards-150/royal-delivery.png", "description": "Un sort qui largue un Recrue Royale et inflige des dégâts de zone.", "roles": [] },
+    { "id": "royal-delivery", "name": "Livraison Royale", "variant": "normal", "baseCard": "royal-delivery", "elixir": 3, "rarity": "common", "category": "spell", "image": "cards-150/royal-delivery.png", "description": "Un sort qui largue une Recrue Royale et inflige des dégâts de zone.", "roles": [] },
+
+    { "id": "ice-golem", "name": "Golem de glace", "variant": "normal", "baseCard": "ice-golem", "elixir": 2, "rarity": "rare", "category": "troop", "image": "cards-150/ice-golem.png", "description": "Un mini-tank qui explose à sa mort en ralentissant les ennemis.", "roles": ["tank"] },
+    { "id": "ice-golem-hero", "name": "Golem de glace Héroïque", "variant": "hero", "baseCard": "ice-golem", "elixir": 2, "rarity": "hero", "category": "hero", "image": "cards-150/ice-golem-hero.png", "description": "Version héroïque du Golem de glace.", "roles": ["tank"] },
 
     { "id": "royal-hogs", "name": "Cochons Royaux", "variant": "normal", "baseCard": "royal-hogs", "elixir": 5, "rarity": "rare", "category": "troop", "image": "cards-150/royal-hogs.png", "description": "Quatre cochons qui chargent vers les bâtiments ennemis.", "roles": ["win_condition"] },
     { "id": "royal-hogs-evo", "name": "Cochons Royaux Évolués", "variant": "evolution", "baseCard": "royal-hogs", "elixir": 5, "rarity": "rare", "category": "troop", "image": "cards-150/royal-hogs-ev1.png", "description": "Pendant 2 cycles, les Cochons Royaux Évolués laissent une traînée de rage.", "roles": ["win_condition"] },
@@ -79,7 +81,6 @@
 
     { "id": "valkyrie", "name": "Valkyrie", "variant": "normal", "baseCard": "valkyrie", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/valkyrie.png", "description": "Une guerrière qui inflige des dégâts de zone autour d'elle.", "roles": ["defense", "splash"] },
     { "id": "valkyrie-evo", "name": "Valkyrie Évoluée", "variant": "evolution", "baseCard": "valkyrie", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/valkyrie-ev1.png", "description": "Pendant 2 cycles, la Valkyrie Évoluée inflige des dégâts de zone plus importants.", "roles": ["defense", "splash"] },
-    { "id": "valkyrie-hero", "name": "Valkyrie Héroïque", "variant": "hero", "baseCard": "valkyrie", "elixir": 4, "rarity": "hero", "category": "hero", "image": "cards-150/valkyrie-hero.png", "description": "Version héroïque de la Valkyrie.", "roles": ["defense"] },
 
     { "id": "musketeer", "name": "Mousquetaire", "variant": "normal", "baseCard": "musketeer", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/musketeer.png", "description": "Une tireuse d'élite à longue portée.", "roles": ["air_defense"] },
     { "id": "musketeer-evo", "name": "Mousquetaire Évoluée", "variant": "evolution", "baseCard": "musketeer", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/musketeer-ev1.png", "description": "Pendant 2 cycles, la Mousquetaire Évoluée tire des balles perforantes.", "roles": ["air_defense"] },
@@ -103,7 +104,6 @@
     { "id": "dart-goblin-evo", "name": "Gobelin à fléchettes Évolué", "variant": "evolution", "baseCard": "dart-goblin", "elixir": 3, "rarity": "rare", "category": "troop", "image": "cards-150/dart-goblin-ev1.png", "description": "Pendant 2 cycles, ses fléchettes empoisonnent les ennemis.", "roles": [] },
 
     { "id": "berserker", "name": "Berserker", "variant": "normal", "baseCard": "berserker", "elixir": 2, "rarity": "rare", "category": "troop", "image": "cards-150/berserker.png", "description": "Son nom est tout à fait explicite !", "roles": [] },
-    { "id": "berserker-hero", "name": "Berserker Héroïque", "variant": "hero", "baseCard": "berserker", "elixir": 2, "rarity": "hero", "category": "hero", "image": "cards-150/berserker-hero.png", "description": "Version héroïque de la Berserker.", "roles": [] },
 
     { "id": "rune-giant", "name": "Géant des Runes", "variant": "normal", "baseCard": "rune-giant", "elixir": 4, "rarity": "rare", "category": "troop", "image": "cards-150/rune-giant.png", "description": "Un géant qui renforce les troupes alliées à proximité avec des runes.", "roles": ["win_condition", "tank"] },
 
@@ -130,7 +130,6 @@
     { "id": "goblin-cage-evo", "name": "Cage à Gobelins Évoluée", "variant": "evolution", "baseCard": "goblin-cage", "elixir": 4, "rarity": "rare", "category": "building", "image": "cards-150/goblin-cage-ev1.png", "description": "Pendant 2 cycles, la Cage Évoluée libère un Gobelin Broyeur plus puissant.", "roles": ["building"] },
 
     { "id": "tombstone", "name": "Pierre tombale", "variant": "normal", "baseCard": "tombstone", "elixir": 3, "rarity": "rare", "category": "building", "image": "cards-150/tombstone.png", "description": "Une pierre tombale qui génère des squelettes en continu.", "roles": ["building"] },
-    { "id": "tombstone-hero", "name": "Pierre tombale Héroïque", "variant": "hero", "baseCard": "tombstone", "elixir": 3, "rarity": "hero", "category": "hero", "image": "cards-150/tombstone-hero.png", "description": "Version héroïque de la Pierre tombale.", "roles": ["building"] },
 
     { "id": "goblin-hut", "name": "Cabane de Gobelins", "variant": "normal", "baseCard": "goblin-hut", "elixir": 5, "rarity": "rare", "category": "building", "image": "cards-150/goblin-hut.png", "description": "Une cabane qui génère des Gobelins à lances en continu.", "roles": [] },
 
@@ -146,6 +145,8 @@
 
     { "id": "earthquake", "name": "Tremblement de terre", "variant": "normal", "baseCard": "earthquake", "elixir": 3, "rarity": "rare", "category": "spell", "image": "cards-150/earthquake.png", "description": "Un sort qui inflige des dégâts sur la durée et ralentit les troupes et bâtiments.", "roles": ["spell", "building_counter"] },
 
+    { "id": "skeleton-dragons", "name": "Dragons squelettes", "variant": "normal", "baseCard": "skeleton-dragons", "elixir": 4, "rarity": "epic", "category": "troop", "image": "cards-150/skeleton-dragons.png", "description": "Deux dragons squelettes volants qui crachent des flammes en zone.", "roles": ["air_defense", "splash"] },
+
     { "id": "witch", "name": "Sorcière", "variant": "normal", "baseCard": "witch", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/witch.png", "description": "Une sorcière qui invoque des squelettes et lance des projectiles magiques.", "roles": [] },
     { "id": "witch-evo", "name": "Sorcière Évoluée", "variant": "evolution", "baseCard": "witch", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/witch-ev1.png", "description": "Pendant 2 cycles, la Sorcière Évoluée invoque des squelettes plus puissants.", "roles": [] },
 
@@ -155,10 +156,8 @@
     { "id": "prince", "name": "Prince", "variant": "normal", "baseCard": "prince", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/prince.png", "description": "Un chevalier monté qui charge après un certain temps.", "roles": [] },
 
     { "id": "dark-prince", "name": "Prince des ténèbres", "variant": "normal", "baseCard": "dark-prince", "elixir": 4, "rarity": "epic", "category": "troop", "image": "cards-150/dark-prince.png", "description": "Un prince avec un bouclier qui inflige des dégâts de zone.", "roles": [] },
-    { "id": "dark-prince-hero", "name": "Prince des ténèbres Héroïque", "variant": "hero", "baseCard": "dark-prince", "elixir": 4, "rarity": "hero", "category": "hero", "image": "cards-150/dark-prince-hero.png", "description": "Version héroïque du Prince des ténèbres.", "roles": [] },
 
     { "id": "bowler", "name": "Bowler", "variant": "normal", "baseCard": "bowler", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/bowler.png", "description": "Une créature qui lance des rochers roulants, repoussant les troupes ennemies.", "roles": [] },
-    { "id": "bowler-hero", "name": "Bowler Héroïque", "variant": "hero", "baseCard": "bowler", "elixir": 5, "rarity": "hero", "category": "hero", "image": "cards-150/bowler-hero.png", "description": "Version héroïque du Bowler.", "roles": [] },
 
     { "id": "executioner", "name": "Exécuteur", "variant": "normal", "baseCard": "executioner", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/executioner.png", "description": "Un combattant qui lance une hache tournoyante infligeant des dégâts de zone.", "roles": ["air_defense", "splash"] },
     { "id": "executioner-evo", "name": "Exécuteur Évolué", "variant": "evolution", "baseCard": "executioner", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/executioner-ev1.png", "description": "Pendant 2 cycles, la hache de l'Exécuteur Évolué inflige des dégâts supplémentaires.", "roles": ["air_defense", "splash"] },
@@ -180,6 +179,8 @@
 
     { "id": "electro-dragon", "name": "Dragon Électrique", "variant": "normal", "baseCard": "electro-dragon", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/electro-dragon.png", "description": "Un dragon volant qui tire des éclairs en chaîne.", "roles": [] },
     { "id": "electro-dragon-evo", "name": "Dragon Électrique Évolué", "variant": "evolution", "baseCard": "electro-dragon", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/electro-dragon-ev1.png", "description": "Pendant 2 cycles, le Dragon Électrique Évolué étourdit plus longtemps.", "roles": [] },
+
+    { "id": "electro-giant", "name": "Géant Électrique", "variant": "normal", "baseCard": "electro-giant", "elixir": 8, "rarity": "epic", "category": "troop", "image": "cards-150/electro-giant.png", "description": "Un tank qui renvoie les dégâts subis sous forme d'éclairs électriques.", "roles": ["win_condition", "tank"] },
 
     { "id": "cannon-cart", "name": "Canon roulant", "variant": "normal", "baseCard": "cannon-cart", "elixir": 5, "rarity": "epic", "category": "troop", "image": "cards-150/cannon-cart.png", "description": "Un canon monté sur roues qui peut se déplacer.", "roles": [] },
 
@@ -254,9 +255,9 @@
     { "id": "miner", "name": "Mineur", "variant": "normal", "baseCard": "miner", "elixir": 3, "rarity": "legendary", "category": "troop", "image": "cards-150/miner.png", "description": "Un mineur qui peut être déployé n'importe où dans l'arène.", "roles": ["win_condition", "cycle"] },
 
     { "id": "ice-wizard", "name": "Sorcier de glace", "variant": "normal", "baseCard": "ice-wizard", "elixir": 3, "rarity": "legendary", "category": "troop", "image": "cards-150/ice-wizard.png", "description": "Un sorcier qui ralentit les troupes ennemies avec ses projectiles de glace.", "roles": [] },
-    { "id": "ice-wizard-hero", "name": "Sorcier de glace Héroïque", "variant": "hero", "baseCard": "ice-wizard", "elixir": 3, "rarity": "hero", "category": "hero", "image": "cards-150/ice-wizard-hero.png", "description": "Version héroïque du Sorcier de glace.", "roles": [] },
 
     { "id": "phoenix", "name": "Phénix", "variant": "normal", "baseCard": "phoenix", "elixir": 4, "rarity": "legendary", "category": "troop", "image": "cards-150/phoenix.png", "description": "Un oiseau de feu qui renaît de ses cendres après sa destruction.", "roles": [] },
+
 
     { "id": "graveyard", "name": "Cimetière", "variant": "normal", "baseCard": "graveyard", "elixir": 5, "rarity": "legendary", "category": "spell", "image": "cards-150/graveyard.png", "description": "Un sort qui invoque des Squelettes en continu dans une zone.", "roles": ["win_condition"] },
 
@@ -279,6 +280,8 @@
     { "id": "little-prince", "name": "Petit Prince", "variant": "champion", "baseCard": "little-prince", "elixir": 3, "rarity": "champion", "category": "troop", "image": "cards-150/little-prince.png", "description": "Un jeune prince champion qui gagne en puissance au fil du temps.", "roles": ["champion"] },
 
     { "id": "goblinstein", "name": "Goblinstein", "variant": "champion", "baseCard": "goblinstein", "elixir": 5, "rarity": "champion", "category": "troop", "image": "cards-150/goblinstein.png", "description": "Un champion gobelin monté sur une créature monstrueuse.", "roles": ["champion"] },
+
+    { "id": "boss-bandit", "name": "Chef Bandit", "variant": "champion", "baseCard": "boss-bandit", "elixir": 6, "rarity": "champion", "category": "troop", "image": "cards-150/boss-bandit.png", "description": "Un champion bandit qui charge et vole les statistiques des ennemis.", "roles": ["champion"] },
 
     { "id": "tower-princess", "name": "Princesse de tour", "variant": "tower", "baseCard": "tower-princess", "elixir": 0, "rarity": "tower", "category": "tower", "image": "cards-150/tower-princess.png", "description": "La tour de couronne standard.", "roles": [] },
     { "id": "cannoneer", "name": "Canonnière", "variant": "tower", "baseCard": "cannoneer", "elixir": 0, "rarity": "tower", "category": "tower", "image": "cards-150/cannoneer.png", "description": "Une tour de couronne qui tire des projectiles lourds.", "roles": [] },

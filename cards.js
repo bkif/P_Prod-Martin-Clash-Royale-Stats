@@ -1,58 +1,58 @@
-async function displayCards() {
+let deck = []; // global, accessible partout
 
+async function displayCards() {
     const db = await loadDatabase();
     if (!db) return;
 
     const container = document.getElementById("cards");
     container.innerHTML = "";
 
+    // 1. Créer les cartes
     db.cards.forEach(card => {
-
         const element = document.createElement("div");
-        element.className = `card rarity-${card.rarity} variant-${card.variant}`;
+        element.className = "card";
+        element.draggable = true;
+        element.dataset.id = card.id;
+
+        element.addEventListener("dragstart", (e) => {
+            e.dataTransfer.setData("text/plain", card.id);
+        });
 
         element.innerHTML = `
-            <img
-                src="${card.image}"
-                alt="${card.name}"
-                class="card-image"
-                onerror="this.style.display='none'"
-            >
-
-            <h2>${card.name}</h2>
-
-            ${badgeVariant(card.variant)}
-
-            <p>💧 Élixir : <strong>${card.elixir}</strong></p>
-            <p>⭐ Rareté : ${card.rarity}</p>
-            <p>🎯 Type : ${card.category}</p>
-
-            ${card.roles && card.roles.length > 0
-                ? `<p>🛠️ ${card.roles.join(", ")}</p>`
-                : ""
-            }
-
-            ${card.description
-                ? `<p class="card-description">${card.description}</p>`
-                : ""
-            }
+            <img src="${card.image}">
         `;
 
         container.appendChild(element);
     });
+
+    // 2. Configurer les slots (une seule fois, après la boucle)
+    document.querySelectorAll(".deck-slot").
+    forEach(slot => {
+        slot.addEventListener("dragover", (e) => {
+            e.preventDefault();
+        });
+
+        slot.addEventListener("drop", (e) => {
+            e.preventDefault();
+            const cardId = e.dataTransfer.getData("text/plain");
+            addCardToDeck(cardId, slot);
+        });
+    });
 }
 
+function addCardToDeck(cardId, slot) {
 
-function badgeVariant(variant) {
-    switch (variant) {
-        case "evolution": return `<p class="badge badge-evo">⚡ Évolution</p>`;
-        case "hero":      return `<p class="badge badge-hero">🦸 Héros</p>`;
-        case "champion":  return `<p class="badge badge-champion">👑 Champion</p>`;
-        case "temporary": return `<p class="badge badge-temp">⏳ Temporaire</p>`;
-        case "tower":     return `<p class="badge badge-tower">🏰 Tour</p>`;
-        default:          return "";
-    }
+    const card = database.cards.find(c => c.id === cardId);
+    if (!card) return;
+
+    // Ajoute au tableau
+    deck.push(cardId);
+
+    // Affiche dans le slot
+    slot.innerHTML = "";
+    const img = document.createElement("img");
+    img.src = `${card.image}`;
+    slot.appendChild(img);
 }
-
 
 displayCards();
