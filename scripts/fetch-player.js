@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const TAG = "TON_TAG";
+const TAG = "#GG829JGY";
 const headers = { Authorization: `Bearer ${process.env.CR_API_KEY}` };
 
 (async () => {
