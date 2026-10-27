@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clash Royale Suisse 🇨🇭</title>
     <link rel="stylesheet" href="style_webdb.css">
+    <link rel="stylesheet" href="recherche.css">
     <link rel="icon" href="images/logo_clash_royale.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236,15 +237,17 @@ Jusqu'au 9 février : La "Chasse aux Couronnes" continue, avec des coffres de jo
 <!--fin des 3 nouveautes-->
 
 <!--stats actuels-->
-<p class="centered-first-title">RECHERCHER UN JOUEUR</p>
-<form id="search-form" class="image-stats">
-  <label for="tag-input">Tag du joueur (obligatoire, ex. #GG829JGY)</label>
-  <input type="text" id="tag-input" required maxlength="16" autocomplete="off">
-  <button type="submit">Rechercher</button>
-</form>
-<div id="search-result" class="image-stats" aria-live="polite"></div>
-<p class="centered-first-title">MES STATS</p>
-<div id="player-stats" class="image-stats"></div>
+<p class="centered-first-title">STATS JOUEUR</p>
+<section class="cr-search">
+  <form id="search-form" class="cr-form">
+    <label for="tag-input">Tag du joueur (obligatoire)</label>
+    <div class="cr-form-row">
+      <input type="text" id="tag-input" required maxlength="16" autocomplete="off" placeholder="#GG829JGY">
+      <button type="submit">Rechercher</button>
+    </div>
+  </form>
+  <div id="search-result" aria-live="polite"></div>
+</section>
 <!--fin des stats actuels-->
 
 <!--notre clan-->
