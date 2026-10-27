@@ -42,17 +42,46 @@ async function displayCards() {
 
 function addCardToDeck(cardId, slot) {
 
-    const card = database.cards.find(c => c.id === cardId);
+    const card = database.cards.find(card => card.id === cardId);
+
     if (!card) return;
 
-    // Ajoute au tableau
-    deck.push(cardId);
+    slot.dataset.cardId = cardId;
 
-    // Affiche dans le slot
-    slot.innerHTML = "";
-    const img = document.createElement("img");
-    img.src = `${card.image}`;
-    slot.appendChild(img);
+    slot.innerHTML = `
+        <img src="${card.image}">
+    `;
+
+    deck = [];
+
+    document.querySelectorAll(".deck-slot").forEach(slot => {
+        if (slot.dataset.cardId) {
+            deck.push(slot.dataset.cardId);
+        }
+    });
+
+    calculateElixir();
 }
+function calculateElixir() {
 
+    if (deck.length === 0) {
+        document.getElementById("average-elixir").textContent =
+            "Élixir moyen : 0 ";
+        return;
+    }
+
+    let total = 0;
+
+    deck.forEach(cardId => {
+
+        const card = database.cards.find(card => card.id === cardId);
+
+        total += card.elixir;
+    });
+
+    const average = total / deck.length;
+
+    document.getElementById("average-elixir").textContent =
+        `Élixir moyen : ${average.toFixed(1)} `;
+}
 displayCards();
