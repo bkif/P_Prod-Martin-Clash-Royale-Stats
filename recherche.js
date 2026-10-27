@@ -1,5 +1,5 @@
 const WORKER_URL = "https://cr-stats.pm00buq.workers.dev";
-const MON_TAG = "GG829JGY";
+const MON_TAG = "V9JJGLL0G";
 
 const form = document.getElementById("search-form");
 const input = document.getElementById("tag-input");
