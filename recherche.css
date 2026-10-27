@@ -71,3 +71,8 @@
 .cr-badge img { width: 64px; height: 64px; object-fit: contain; }
 .cr-badge-name, .cr-badge-lvl { display: block; }
 .cr-badge-lvl { opacity: .75; }
+.cr-special img { outline: none; border-radius: 0; filter: drop-shadow(0 0 6px rgba(0, 0, 0, .5)); }
+.cr-special .cr-lvl { background: transparent; text-shadow: 0 1px 3px #000, 0 0 6px #000; bottom: 6px; }
+.cr-cardimg-big.cr-special { width: 104px; }
+.cr-cardimg-mid.cr-special { width: 88px; }
+.cr-cardimg-small.cr-special { width: 56px; }

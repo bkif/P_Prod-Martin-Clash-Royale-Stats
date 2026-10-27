@@ -16,6 +16,9 @@ const RARITIES = {
 const ROLES = { leader: "Chef", coLeader: "Chef adjoint", elder: "Aîné", member: "Membre" };
 const RESULT_LABEL = { win: "Victoire", loss: "Défaite", draw: "Égalité" };
 
+// dans le jeu, les 2 premiers emplacements du deck sont les emplacements évolution
+const EVO_SLOTS = 2;
+
 const num = (n) => (n ?? 0).toLocaleString("fr-CH");
 
 // textContent partout : un pseudo ne peut pas injecter de HTML
@@ -30,17 +33,20 @@ function message(text) {
   out.replaceChildren(el("p", "cr-message", text));
 }
 
-function cardTile(c, size) {
-  const wrap = el("div", `cr-cardimg cr-cardimg-${size} cr-r-${c.rarity ?? "none"}`);
-  wrap.title = c.name;
+function cardTile(c, size, variant = "normal") {
+  const special = variant !== "normal";
+  const src = variant === "evo" ? c.evoImage : variant === "hero" ? c.heroImage : c.image;
+  const wrap = el(
+    "div",
+    `cr-cardimg cr-cardimg-${size} ${special ? "cr-special" : "cr-r-" + (c.rarity ?? "none")}`
+  );
+  wrap.title = special ? `${c.name} (${variant === "evo" ? "Évolution" : "Héros"})` : c.name;
   const img = document.createElement("img");
-  img.src = c.image;
-  img.alt = c.name;
+  img.src = src;
+  img.alt = wrap.title;
   img.loading = "lazy";
   img.referrerPolicy = "no-referrer";
   wrap.append(img, el("span", "cr-lvl", `Niv. ${c.level}`));
-  if (c.evo) wrap.append(el("span", "cr-tag cr-tag-evo", "EVO"));
-  if (c.hero) wrap.append(el("span", "cr-tag cr-tag-hero", "HÉROS"));
   return wrap;
 }
 
@@ -87,7 +93,15 @@ function renderProfile({ player: p, chests }) {
   box.append(grid, el("h4", "cr-title", "Deck actuel"));
 
   const deck = el("div", "cr-deck");
-  p.deck.forEach((c) => deck.append(cardTile(c, "big")));
+  let evoUsed = 0;
+  p.deck.forEach((c) => {
+    if (c.evo && evoUsed < EVO_SLOTS) {
+      evoUsed++;
+      deck.append(cardTile(c, "big", "evo"));
+    } else {
+      deck.append(cardTile(c, "big"));
+    }
+  });
   p.tower.forEach((c) => deck.append(cardTile(c, "big")));
   box.append(deck);
 
@@ -127,7 +141,12 @@ function renderCards(cards) {
       ...cards
         .filter((c) => current === "all" || c.rarity === current)
         .sort((a, b) => b.level - a.level || a.name.localeCompare(b.name))
-        .map((c) => cardTile(c, "mid"))
+        .flatMap((c) => {
+          const tiles = [cardTile(c, "mid")];
+          if (c.evo) tiles.push(cardTile(c, "mid", "evo"));
+          if (c.hero) tiles.push(cardTile(c, "mid", "hero"));
+          return tiles;
+        })
     );
   }
 
@@ -215,7 +234,9 @@ function renderBattles(battles) {
     );
 
     const cards = el("div", "cr-deck cr-deck-small");
-    b.cards.forEach((c) => cards.append(cardTile(c, "small")));
+    b.cards.forEach((c) =>
+      cards.append(cardTile(c, "small", c.evo ? "evo" : c.hero ? "hero" : "normal"))
+    );
 
     row.append(head, meta, cards);
     list.append(row);
