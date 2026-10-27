@@ -236,6 +236,13 @@ Jusqu'au 9 février : La "Chasse aux Couronnes" continue, avec des coffres de jo
 <!--fin des 3 nouveautes-->
 
 <!--stats actuels-->
+<p class="centered-first-title">RECHERCHER UN JOUEUR</p>
+<form id="search-form" class="image-stats">
+  <label for="tag-input">Tag du joueur (obligatoire, ex. #GG829JGY)</label>
+  <input type="text" id="tag-input" required maxlength="16" autocomplete="off">
+  <button type="submit">Rechercher</button>
+</form>
+<div id="search-result" class="image-stats" aria-live="polite"></div>
 <p class="centered-first-title">MES STATS</p>
 <div id="player-stats" class="image-stats"></div>
 <!--fin des stats actuels-->
