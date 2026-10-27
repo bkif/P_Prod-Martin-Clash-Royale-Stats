@@ -44,3 +44,30 @@
   .cr-cardimg-small { width: 38px; }
   .cr-name { font-size: 1.5rem; }
 }
+.cr-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.cr-tab, .cr-filter { padding: 8px 16px; border-radius: 999px; border: 2px solid rgba(245, 197, 66, .6); background: rgba(12, 24, 60, .82); color: #fff; font-size: 1rem; cursor: pointer; }
+.cr-tab[aria-pressed="true"], .cr-filter[aria-pressed="true"] { background: linear-gradient(#ffd34d, #f29a00); color: #3a2300; font-weight: 700; }
+.cr-tab:focus-visible, .cr-filter:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+.cr-filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 14px; }
+.cr-filter { padding: 5px 12px; font-size: .9rem; }
+.cr-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.cr-cardimg-mid { width: 76px; }
+
+.cr-cardimg img { outline: 2px solid transparent; }
+.cr-r-common img { outline-color: #b0b8c4; }
+.cr-r-rare img { outline-color: #ff9c1a; }
+.cr-r-epic img { outline-color: #c04dff; }
+.cr-r-legendary img { outline-color: #38e0e8; }
+.cr-r-champion img { outline-color: #ffd34d; }
+
+.cr-tag { position: absolute; top: 2px; font-size: .6rem; font-weight: 700; padding: 1px 4px; border-radius: 6px; color: #fff; }
+.cr-tag-evo { left: 2px; background: #a63cff; }
+.cr-tag-hero { right: 2px; background: #e8a100; color: #2a1a00; }
+.cr-cardimg-small .cr-tag { display: none; }
+
+.cr-badges { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
+.cr-badge { background: rgba(255, 255, 255, .08); border-radius: 12px; padding: 8px; text-align: center; font-size: .75rem; }
+.cr-badge img { width: 64px; height: 64px; object-fit: contain; }
+.cr-badge-name, .cr-badge-lvl { display: block; }
+.cr-badge-lvl { opacity: .75; }
