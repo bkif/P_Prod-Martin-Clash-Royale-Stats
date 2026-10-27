@@ -1,0 +1,57 @@
+{
+  "name": "Tag™",
+  "tag": "#GG829JGY",
+  "level": 89,
+  "trophies": 14000,
+  "bestTrophies": 14000,
+  "wins": 58413,
+  "losses": 41077,
+  "battleCount": 99490,
+  "threeCrownWins": 10297,
+  "arena": "Spirit Square",
+  "clan": "TagUrTilted",
+  "favouriteCard": "Electro Giant",
+  "deck": [
+    {
+      "name": "Goblin Barrel",
+      "level": 11,
+      "image": "https://api-assets.clashroyale.com/cards/300/CoZdp5PpsTH858l212lAMeJxVJ0zxv9V-f5xC8Bvj5g.png"
+    },
+    {
+      "name": "Valkyrie",
+      "level": 14,
+      "image": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png"
+    },
+    {
+      "name": "Skeleton Army",
+      "level": 11,
+      "image": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png"
+    },
+    {
+      "name": "Wall Breakers",
+      "level": 11,
+      "image": "https://api-assets.clashroyale.com/cards/300/_xPphEfC8eEwFNrfU3cMQG9-f5JaLQ31ARCA7l3XtW4.png"
+    },
+    {
+      "name": "Princess",
+      "level": 8,
+      "image": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png"
+    },
+    {
+      "name": "Dart Goblin",
+      "level": 14,
+      "image": "https://api-assets.clashroyale.com/cards/300/BmpK3bqEAviflqHCdxxnfm-_l3pRPJw3qxHkwS55nCY.png"
+    },
+    {
+      "name": "Ice Spirit",
+      "level": 16,
+      "image": "https://api-assets.clashroyale.com/cards/300/lv1budiafU9XmSdrDkk0NYyqASAFYyZ06CPysXKZXlA.png"
+    },
+    {
+      "name": "Cannon",
+      "level": 16,
+      "image": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png"
+    }
+  ],
+  "updated": "2026-10-27T09:04:04.139Z"
+}
