@@ -1,8 +1,8 @@
-name: Update cards
+name: Update player
 on:
   schedule:
-    - cron: "0 6 * * *"   # tous les jours à 6h UTC
-  workflow_dispatch:       # bouton de lancement manuel
+    - cron: "0 6 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -12,14 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-            - run: node scripts/fetch-cards.js
-        env:
-          CR_API_KEY: ${{ secrets.CR_API_KEY }}
       - run: node scripts/fetch-player.js
         env:
           CR_API_KEY: ${{ secrets.CR_API_KEY }}
       - run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add data/
-          git diff --cached --quiet || (git commit -m "Update data" && git push)
+          git add data/player.json
+          git diff --cached --quiet || (git commit -m "Update player" && git push)
