@@ -1,5 +1,5 @@
 const WORKER_URL = "https://cr-stats.pm00buq.workers.dev";
-const MON_TAG = "v9jjgll0g";
+const MON_TAG = "GG829JGY";
 
 const form = document.getElementById("search-form");
 const input = document.getElementById("tag-input");
@@ -16,9 +16,6 @@ const RARITIES = {
 const ROLES = { leader: "Chef", coLeader: "Chef adjoint", elder: "Aîné", member: "Membre" };
 const RESULT_LABEL = { win: "Victoire", loss: "Défaite", draw: "Égalité" };
 
-// dans le jeu, les 2 premiers emplacements du deck sont les emplacements évolution
-const EVO_SLOTS = 2;
-
 const num = (n) => (n ?? 0).toLocaleString("fr-CH");
 
 // textContent partout : un pseudo ne peut pas injecter de HTML
@@ -33,21 +30,36 @@ function message(text) {
   out.replaceChildren(el("p", "cr-message", text));
 }
 
+// Carte façon Clash Royale : image + goutte d'élixir + barre de niveau
 function cardTile(c, size, variant = "normal") {
   const special = variant !== "normal";
   const src = variant === "evo" ? c.evoImage : variant === "hero" ? c.heroImage : c.image;
-  const wrap = el(
+
+  const tile = el(
     "div",
-    `cr-cardimg cr-cardimg-${size} ${special ? "cr-special" : "cr-r-" + (c.rarity ?? "none")}`
+    `cr-tile cr-tile-${size} cr-r-${c.rarity ?? "none"}${special ? " cr-special" : ""}`
   );
-  wrap.title = special ? `${c.name} (${variant === "evo" ? "Évolution" : "Héros"})` : c.name;
+  tile.title = special
+    ? `${c.name} (${variant === "evo" ? "Évolution" : "Héros"})`
+    : c.name;
+
+  const art = el("div", "cr-art");
   const img = document.createElement("img");
   img.src = src;
-  img.alt = wrap.title;
+  img.alt = tile.title;
   img.loading = "lazy";
   img.referrerPolicy = "no-referrer";
-  wrap.append(img, el("span", "cr-lvl", `Niv. ${c.level}`));
-  return wrap;
+  art.append(img);
+  tile.append(art);
+
+  if (typeof c.elixir === "number") {
+    const drop = el("span", "cr-elixir");
+    drop.append(el("span", "", String(c.elixir)));
+    tile.append(drop);
+  }
+
+  tile.append(el("span", "cr-lvl", size === "small" ? String(c.level) : `Niv. ${c.level}`));
+  return tile;
 }
 
 function renderHeader(p) {
@@ -64,6 +76,11 @@ function renderProfile({ player: p, chests }) {
   const total = p.wins + p.losses;
   const streak =
     p.streak > 0 ? `${p.streak} victoires` : p.streak < 0 ? `${-p.streak} défaites` : "-";
+
+  const costs = p.deck.map((c) => c.elixir).filter((x) => typeof x === "number");
+  const avgElixir = costs.length
+    ? (costs.reduce((a, b) => a + b, 0) / costs.length).toFixed(1)
+    : "-";
 
   const items = [
     ["Trophées", num(p.trophies)],
@@ -90,20 +107,30 @@ function renderProfile({ player: p, chests }) {
     s.append(el("span", "cr-stat-value", String(value)), el("span", "cr-stat-label", label));
     grid.append(s);
   });
-  box.append(grid, el("h4", "cr-title", "Deck actuel"));
+  box.append(grid, el("h4", "cr-title", `Deck actuel · élixir moyen : ${avgElixir}`));
 
-  const deck = el("div", "cr-deck");
-  let evoUsed = 0;
-  p.deck.forEach((c) => {
-    if (c.evo && evoUsed < EVO_SLOTS) {
-      evoUsed++;
-      deck.append(cardTile(c, "big", "evo"));
-    } else {
-      deck.append(cardTile(c, "big"));
-    }
-  });
-  p.tower.forEach((c) => deck.append(cardTile(c, "big")));
-  box.append(deck);
+  const wrap = el("div", "cr-deckwrap");
+  const deckGrid = el("div", "cr-deckgrid");
+  p.deck.forEach((c) => deckGrid.append(cardTile(c, "big", c.variant)));
+  wrap.append(deckGrid);
+
+  if (p.tower.length) {
+    const tower = el("div", "cr-tower");
+    p.tower.forEach((c) => tower.append(cardTile(c, "big")));
+    tower.append(el("p", "cr-meta", "Carte de tour"));
+    wrap.append(tower);
+  }
+  box.append(wrap);
+
+  if (!p.deckFromBattle) {
+    box.append(
+      el(
+        "p",
+        "cr-meta",
+        "Évolutions et héros devinés d'après les emplacements : aucun combat récent avec ce deck."
+      )
+    );
+  }
 
   if (chests.length) {
     box.append(
@@ -233,10 +260,8 @@ function renderBattles(battles) {
       `${String(b.mode).replaceAll("_", " ")} · contre ${b.opponents.join(" & ") || "?"} · ${date}`
     );
 
-    const cards = el("div", "cr-deck cr-deck-small");
-    b.cards.forEach((c) =>
-      cards.append(cardTile(c, "small", c.evo ? "evo" : c.hero ? "hero" : "normal"))
-    );
+    const cards = el("div", "cr-deck-small");
+    b.cards.forEach((c) => cards.append(cardTile(c, "small", c.variant)));
 
     row.append(head, meta, cards);
     list.append(row);

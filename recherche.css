@@ -1,5 +1,6 @@
-.cr-search { position: relative; z-index: 1; max-width: 900px; margin: 0 auto 40px; padding: 0 16px; color: #fff; }
+.cr-search { position: relative; z-index: 1; max-width: 960px; margin: 0 auto 40px; padding: 0 16px; color: #fff; }
 
+/* formulaire */
 .cr-form { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
 .cr-form label { font-size: 1.1rem; text-shadow: 0 2px 4px #000; }
 .cr-form-row { display: flex; gap: 8px; }
@@ -8,25 +9,65 @@
 .cr-form button { padding: 12px 22px; border: 0; border-radius: 10px; background: linear-gradient(#ffd34d, #f29a00); color: #3a2300; font-weight: 700; font-size: 1.05rem; cursor: pointer; }
 .cr-form button:hover { filter: brightness(1.1); }
 
+/* blocs */
 .cr-card { background: rgba(12, 24, 60, .82); backdrop-filter: blur(6px); border: 2px solid rgba(245, 197, 66, .6); border-radius: 16px; padding: 20px; margin-bottom: 20px; box-shadow: 0 6px 20px rgba(0, 0, 0, .45); }
 .cr-name { margin: 0; font-size: 2rem; color: #ffd34d; text-shadow: 0 2px 0 #000; }
 .cr-sub, .cr-meta { margin: 4px 0 12px; opacity: .85; }
 .cr-title { margin: 20px 0 10px; font-size: 1.3rem; color: #ffd34d; }
 .cr-message { text-align: center; font-size: 1.1rem; text-shadow: 0 2px 4px #000; }
 
-.cr-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 10px; }
+/* stats */
+.cr-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px; }
 .cr-stat { background: rgba(255, 255, 255, .08); border-radius: 12px; padding: 12px; text-align: center; }
-.cr-stat-value { display: block; font-size: 1.5rem; color: #fff; }
+.cr-stat-value { display: block; font-size: 1.4rem; color: #fff; }
 .cr-stat-label { display: block; font-size: .85rem; opacity: .75; }
 
-.cr-deck { display: flex; flex-wrap: wrap; gap: 8px; }
-.cr-cardimg { position: relative; }
-.cr-cardimg img { display: block; width: 100%; height: auto; border-radius: 8px; }
-.cr-cardimg-big { width: 90px; }
-.cr-cardimg-small { width: 48px; }
-.cr-lvl { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-size: .7rem; background: rgba(0, 0, 0, .65); color: #fff; border-radius: 0 0 8px 8px; }
-.cr-cardimg-small .cr-lvl { display: none; }
+/* onglets et filtres */
+.cr-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.cr-tab, .cr-filter { padding: 8px 16px; border-radius: 999px; border: 2px solid rgba(245, 197, 66, .6); background: rgba(12, 24, 60, .82); color: #fff; font-size: 1rem; cursor: pointer; }
+.cr-tab[aria-pressed="true"], .cr-filter[aria-pressed="true"] { background: linear-gradient(#ffd34d, #f29a00); color: #3a2300; font-weight: 700; }
+.cr-tab:focus-visible, .cr-filter:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.cr-filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 14px; }
+.cr-filter { padding: 5px 12px; font-size: .9rem; }
 
+/* ===== cartes façon Clash Royale ===== */
+.cr-tile { position: relative; font-size: 14px; }
+.cr-tile-big { width: 100%; }
+.cr-tile-mid { width: 84px; font-size: 12px; }
+.cr-tile-small { width: 58px; font-size: 10px; }
+
+.cr-art { position: relative; }
+.cr-art img { display: block; width: 100%; height: auto; border-radius: .6em; }
+
+/* évolutions et héros : l'image contient déjà le halo, on l'agrandit pour
+   que la carte ait la même taille que les autres (à ajuster si besoin) */
+.cr-special { z-index: 1; }
+.cr-special .cr-art { margin: -13% -11% -13%; }
+.cr-special .cr-art img { border-radius: 0; filter: drop-shadow(0 0 .4em rgba(0, 0, 0, .45)); }
+
+/* goutte d'élixir */
+.cr-elixir { position: absolute; top: 2%; left: -4%; z-index: 2; width: 2em; height: 2em; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 35% 30%, #ff9bff, #d02bd9 55%, #8a0f97); border: .12em solid #fff; border-radius: 50% 50% 0 50%; transform: rotate(45deg); box-shadow: 0 .1em .3em rgba(0, 0, 0, .6); }
+.cr-elixir span { transform: rotate(-45deg); color: #fff; font-weight: 700; font-size: 1.05em; text-shadow: 0 .08em .15em #000; }
+.cr-special .cr-elixir { top: 6%; left: 0; }
+
+/* barre de niveau, couleur selon la rareté */
+.cr-lvl { display: block; margin-top: .3em; padding: .2em 0; text-align: center; border-radius: .5em; font-size: .8em; font-weight: 700; color: #fff; background: var(--rar, #555); text-shadow: 0 .06em .12em rgba(0, 0, 0, .7); position: relative; z-index: 2; }
+.cr-r-common { --rar: #3b8fe0; }
+.cr-r-rare { --rar: #f08a00; }
+.cr-r-epic { --rar: #a73bd6; }
+.cr-r-legendary { --rar: #17b6c4; }
+.cr-r-champion { --rar: #d9a400; }
+
+/* deck : grille 4 x 2 comme dans le jeu */
+.cr-deckwrap { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; padding-top: 16px; }
+.cr-deckgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px 14px; width: min(100%, 480px); }
+.cr-tower { width: 104px; }
+.cr-tower .cr-meta { text-align: center; margin: 6px 0 0; }
+
+/* collection */
+.cr-grid { display: flex; flex-wrap: wrap; gap: 16px 10px; padding-top: 12px; }
+
+/* combats */
 .cr-battles { display: flex; flex-direction: column; gap: 10px; }
 .cr-battle { border-left: 6px solid #888; background: rgba(255, 255, 255, .07); border-radius: 10px; padding: 10px 14px; }
 .cr-win { border-left-color: #3ddc6b; background: rgba(61, 220, 107, .12); }
@@ -37,42 +78,20 @@
 .cr-loss .cr-result { color: #ff6b6b; }
 .cr-score { font-size: 1.2rem; }
 .cr-trophy { margin-left: auto; }
-.cr-meta { margin: 4px 0 8px; font-size: .9rem; }
+.cr-battle .cr-meta { margin: 4px 0 8px; font-size: .9rem; }
+.cr-deck-small { display: flex; flex-wrap: wrap; gap: 14px 8px; padding-top: 10px; }
 
-@media (max-width: 600px) {
-  .cr-cardimg-big { width: 70px; }
-  .cr-cardimg-small { width: 38px; }
-  .cr-name { font-size: 1.5rem; }
-}
-.cr-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-.cr-tab, .cr-filter { padding: 8px 16px; border-radius: 999px; border: 2px solid rgba(245, 197, 66, .6); background: rgba(12, 24, 60, .82); color: #fff; font-size: 1rem; cursor: pointer; }
-.cr-tab[aria-pressed="true"], .cr-filter[aria-pressed="true"] { background: linear-gradient(#ffd34d, #f29a00); color: #3a2300; font-weight: 700; }
-.cr-tab:focus-visible, .cr-filter:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
-
-.cr-filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 14px; }
-.cr-filter { padding: 5px 12px; font-size: .9rem; }
-.cr-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-.cr-cardimg-mid { width: 76px; }
-
-.cr-cardimg img { outline: 2px solid transparent; }
-.cr-r-common img { outline-color: #b0b8c4; }
-.cr-r-rare img { outline-color: #ff9c1a; }
-.cr-r-epic img { outline-color: #c04dff; }
-.cr-r-legendary img { outline-color: #38e0e8; }
-.cr-r-champion img { outline-color: #ffd34d; }
-
-.cr-tag { position: absolute; top: 2px; font-size: .6rem; font-weight: 700; padding: 1px 4px; border-radius: 6px; color: #fff; }
-.cr-tag-evo { left: 2px; background: #a63cff; }
-.cr-tag-hero { right: 2px; background: #e8a100; color: #2a1a00; }
-.cr-cardimg-small .cr-tag { display: none; }
-
+/* badges */
 .cr-badges { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
 .cr-badge { background: rgba(255, 255, 255, .08); border-radius: 12px; padding: 8px; text-align: center; font-size: .75rem; }
 .cr-badge img { width: 64px; height: 64px; object-fit: contain; }
 .cr-badge-name, .cr-badge-lvl { display: block; }
 .cr-badge-lvl { opacity: .75; }
-.cr-special img { outline: none; border-radius: 0; filter: drop-shadow(0 0 6px rgba(0, 0, 0, .5)); }
-.cr-special .cr-lvl { background: transparent; text-shadow: 0 1px 3px #000, 0 0 6px #000; bottom: 6px; }
-.cr-cardimg-big.cr-special { width: 104px; }
-.cr-cardimg-mid.cr-special { width: 88px; }
-.cr-cardimg-small.cr-special { width: 56px; }
+
+@media (max-width: 600px) {
+  .cr-name { font-size: 1.5rem; }
+  .cr-deckgrid { gap: 22px 8px; }
+  .cr-tower { width: 84px; }
+  .cr-tile-mid { width: 70px; }
+  .cr-tile-small { width: 44px; }
+}
