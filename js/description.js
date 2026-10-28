@@ -49,6 +49,11 @@ function buildCard(c) {
     const article = document.createElement("article");
     article.className = "description-card-box";
     article.id = c.id;
+
+    const desc = c.description
+        ? `<p>${c.description}</p>`
+        : `<p class="empty-desc">Description non disponible via l'API.</p>`;
+
     article.innerHTML = `
         <h4>${c.name}</h4>
         <img src="${c.image}" alt="${c.name}" loading="lazy" decoding="async">
@@ -56,7 +61,7 @@ function buildCard(c) {
             <h2 style="color:${meta.color}">Rareté<br>${meta.label}</h2>
             <h2>Type<br>${c.type ?? "—"}</h2>
         </div>
-        <p>${c.description ?? "Description à venir."}</p>
+        ${desc}
     `;
     return article;
 }
