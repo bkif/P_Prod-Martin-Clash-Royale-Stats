@@ -4,19 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MH Legacy, Clash Royale Suisse 🇨🇭</title>
-<meta name="description" content="Decks méta à copier, stats de joueur, nouveautés et équilibrage de Clash Royale, par la communauté suisse.">
 <link rel="icon" href="./images/logo_clash_royale.png" type="image/png">
-<meta name="theme-color" content="#071433">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/home.css">
-<link rel="stylesheet" href="./css/recherche.css?v=11">
+<!-- CSS intégré pour la recherche, plus de problème de chemin -->
+<style>
+.cr-search { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto 40px; padding: 0 16px; color: #fff; }
+.cr-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; padding: 20px; background: rgba(12, 24, 60, .82); border: 2px solid rgba(245, 197, 66, .6); border-radius: 16px; box-shadow: 0 6px 20px rgba(0, 0, 0, .45); }
+.cr-form label { font-size: 1rem; font-weight: 700; color: #ffc933; }
+.cr-form-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.cr-form input { flex: 1 1 200px; padding: 12px 16px; border-radius: 10px; border: 2px solid #f5c542; background: rgba(10, 20, 50, .9); color: #fff; font-size: 1.05rem; }
+.cr-form button { padding: 12px 26px; border: 0; border-radius: 10px; background: linear-gradient(#ffd34d, #f29a00); color: #3a2300; font-weight: 800; font-size: 1.05rem; cursor: pointer; }
+.cr-message { text-align: center; font-size: 1.1rem; padding: 20px; color: #fff; }
+.cr-card { background: rgba(12, 24, 60, .82); border: 2px solid rgba(245, 197, 66, .6); border-radius: 16px; padding: 20px; margin-bottom: 20px; box-shadow: 0 6px 20px rgba(0, 0, 0, .45); }
+.cr-name { margin: 0; font-size: 2rem; color: #ffd34d; }
+.cr-sub { margin: 4px 0 12px; opacity: .85; }
+.cr-title { margin: 0 0 10px; font-size: 1.3rem; color: #ffd34d; }
+.cr-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+.cr-stat { background: rgba(255, 255, 255, .08); border-radius: 12px; padding: 12px; text-align: center; }
+.cr-stat-value { display: block; font-size: 1.4rem; color: #fff; font-weight: 800; }
+.cr-stat-label { display: block; font-size: .85rem; opacity: .75; }
+.cr-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 900px) { .cr-cols { grid-template-columns: 1fr; } }
+.cr-deckgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
+.cr-slot { position: relative; width: 100%; aspect-ratio: 3/4; }
+.cr-tile { width: 100%; height: 100%; border-radius: 8px; background: #141c30; border: 2px solid #556; position: relative; overflow: hidden; }
+.cr-art img { width: 100%; height: 100%; object-fit: cover; }
+.cr-el { position: absolute; top: -8px; left: -8px; width: 24px; height: 24px; background: radial-gradient(circle at 35% 30%, #f5a0ff, #c53bd1 55%, #7b1389); border: 2px solid #f3c8ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; color: #fff; z-index: 4; }
+.cr-lv { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,.85)); text-align: center; font-weight: 700; font-size: 0.8rem; padding: 10px 0 4px; color: #fff; }
+.cr-r-common { border-color: #4b86c9; } .cr-r-rare { border-color: #d4861a; } .cr-r-epic { border-color: #a043cf; } .cr-r-legendary { border-color: #2bb9c4; } .cr-r-champion { border-color: #d9a400; }
+.cr-battles { display: flex; flex-direction: column; gap: 10px; }
+.cr-battle { border-left: 6px solid #888; background: rgba(255, 255, 255, .07); border-radius: 10px; padding: 10px 14px; }
+.cr-win { border-left-color: #3ddc6b; background: rgba(61, 220, 107, .12); }
+.cr-loss { border-left-color: #ff4d4d; background: rgba(255, 77, 77, .12); }
+.cr-result { font-size: 1.1rem; font-weight: 700; }
+.cr-win .cr-result { color: #3ddc6b; } .cr-loss .cr-result { color: #ff6b6b; }
+</style>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="dropG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9cff"/><stop offset="1" stop-color="#b62cc4"/></linearGradient><symbol id="drop" viewBox="0 0 24 28"><path d="M12 1.5C12 1.5 3.5 11.5 3.5 17.5a8.5 8.5 0 0 0 17 0C20.5 11.5 12 1.5 12 1.5Z" fill="url(#dropG)" stroke="#5c0f66" stroke-width="1.4"/><ellipse cx="8.6" cy="16" rx="1.9" ry="3.4" fill="#fff" opacity=".55" transform="rotate(18 8.6 16)"/></symbol></defs></svg>
 
 <header class="top">
   <div class="bar">
@@ -34,123 +63,16 @@
       <div class="btns">
         <a class="btn" href="#joueur">Voir mes stats</a>
         <a class="btn alt" href="#decks">Les decks du moment</a>
-        <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.supercell.clashroyale" target="_blank" rel="noopener">Jouer</a>
       </div>
     </div>
-    <figure style="margin:0">
-      <div class="board">
-        <img src="./images/Hog.webp" alt="Cochon">
-        <img src="./images/Golem.webp" alt="Golem">
-        <img src="./images/Musk.webp" alt="Mousquetaire">
-        <img src="./images/Log.webp" alt="Bûche">
-        <img src="./images/Fireball.webp" alt="Boule de feu">
-        <img src="./images/Cannon.webp" alt="Canon">
-        <img src="./images/icespirit.webp" alt="Esprit de glace">
-        <img src="./images/Skellies.webp" alt="Squelettes">
-      </div>
-      <figcaption>
-        <span>Deck du moment : Hog 2.6</span>
-        <a class="btn" href="https://link.clashroyale.com/en/?clashroyale://copyDeck?deck=26000010;27000000;26000038;26000014;26000030;28000011;28000000;26000021&amp;tt=159000000&amp;l=Royals">Copier dans le jeu</a>
-      </figcaption>
-    </figure>
   </div>
 </div>
 
 <main id="contenu">
-  <section class="qs" aria-label="Accès rapide">
-    <div class="quick">
-      <a href="./cartes.html"><img loading="lazy" src="./images/cards-button.png" alt="">Cartes</a>
-      <a href="#joueur"><img loading="lazy" src="./images/battle-button.png" alt="">Combats</a>
-      <a href="./clan_site.html"><img loading="lazy" src="./images/clan_button.png" alt="">Clans</a>
-      <a href="https://escharts.com/games/clash-royale" target="_blank" rel="noopener"><img loading="lazy" src="./images/tournois_button.png" alt="">Tournois</a>
-      <a href="https://store.supercell.com/" target="_blank" rel="noopener"><img loading="lazy" src="./images/shop_icon.webp" alt="">Boutique</a>
-    </div>
-  </section>
-
-  <section id="decks">
-    <h2>Les 3 decks du moment</h2>
-    <p class="lead">Un clic sur « Copier dans le jeu » ouvre Clash Royale avec le deck prêt à enregistrer.</p>
-
-    <article class="deck">
-      <div class="board">
-        <img loading="lazy" src="./images/XBow.webp" alt="X-Bow"><img loading="lazy" src="./images/Tesla.webp" alt="Tesla"><img loading="lazy" src="./images/GoldenKnight.webp" alt="Chevalier doré"><img loading="lazy" src="./images/Archers.webp" alt="Archères"><img loading="lazy" src="./images/Log.webp" alt="Bûche"><img loading="lazy" src="./images/Golem.webp" alt="Golem"><img loading="lazy" src="./images/icespirit.webp" alt="Esprit de glace"><img loading="lazy" src="./images/Zap.webp" alt="Zap">
-      </div>
-      <div>
-        <span class="avg"><svg viewBox="0 0 24 28" aria-hidden="true"><use href="#drop"/></svg>3.0</span>
-        <h3>X-Bow 3.0 avec le Chevalier Évo</h3>
-        <p>Un deck de contrôle basé sur le siège : l’Arbalète en défense ou en attaque, protégée par la Tesla, les Archères et les sorts. L’objectif est d’user l’adversaire petit à petit en gardant l’avantage d’élixir. Il demande un placement précis et une bonne gestion du cycle, et il domine les match-ups lents. Je l’ai joué longtemps, et avec la nouvelle évolution il est encore plus fort.</p>
-        <a class="btn" href="https://link.clashroyale.com/en/?clashroyale://copyDeck?deck=26000001;27000006;26000000;26000084;26000010;28000011;28000000;27000008&amp;tt=159000000&amp;l=Royals">Copier dans le jeu</a>
-      </div>
-    </article>
-
-    <article class="deck">
-      <div class="board">
-        <img loading="lazy" src="./images/Hog.webp" alt="Cochon"><img loading="lazy" src="./images/Golem.webp" alt="Golem"><img loading="lazy" src="./images/Musk.webp" alt="Mousquetaire"><img loading="lazy" src="./images/Log.webp" alt="Bûche"><img loading="lazy" src="./images/Fireball.webp" alt="Boule de feu"><img loading="lazy" src="./images/Cannon.webp" alt="Canon"><img loading="lazy" src="./images/icespirit.webp" alt="Esprit de glace"><img loading="lazy" src="./images/Skellies.webp" alt="Squelettes">
-      </div>
-      <div>
-        <span class="tag">Meilleur deck actuel</span>
-        <span class="avg"><svg viewBox="0 0 24 28" aria-hidden="true"><use href="#drop"/></svg>2.6</span>
-        <h3>Hog 2.6</h3>
-        <p>Un deck rapide qui rejoue le Cochon le plus souvent possible. On défend à bas coût (Canon, Esprit de glace, sorts) puis on contre-attaque tout de suite, et le Mousquetaire gère l’aérien. Il punit les decks lourds avec une pression constante. C’est le deck que je joue en ce moment : très fort, mais il demande du skill.</p>
-        <a class="btn" href="https://link.clashroyale.com/en/?clashroyale://copyDeck?deck=26000010;27000000;26000038;26000014;26000030;28000011;28000000;26000021&amp;tt=159000000&amp;l=Royals">Copier dans le jeu</a>
-      </div>
-    </article>
-
-    <article class="deck">
-      <div class="board">
-        <img loading="lazy" src="./images/GoblinDrill.webp" alt="Foreuse gobeline"><img loading="lazy" src="./images/Poison.webp" alt="Poison"><img loading="lazy" src="./images/Cannon.webp" alt="Canon"><img loading="lazy" src="./images/GoblinDemolisher.webp" alt="Démolisseur gobelin"><img loading="lazy" src="./images/GoldenKnight.webp" alt="Chevalier doré"><img loading="lazy" src="./images/Firecracker.webp" alt="Pétardière"><img loading="lazy" src="./images/icespirit.webp" alt="Esprit de glace"><img loading="lazy" src="./images/Skellies.webp" alt="Squelettes">
-      </div>
-      <div>
-        <span class="avg"><svg viewBox="0 0 24 28" aria-hidden="true"><use href="#drop"/></svg>3.0</span>
-        <h3>Drill 3.0, de retour dans la méta</h3>
-        <p>Ce deck mise sur la Foreuse évoluée, très forte grâce à ses dégâts rapides et difficiles à défendre. La Tesla évolution assure une défense solide à bas coût, et avec le Chevalier doré et le Prince il punit vite les erreurs. Son cycle rapide remet la foreuse en jeu en permanence, ce qui le rend efficace contre la plupart des archétypes.</p>
-        <a class="btn" href="https://link.clashroyale.com/en/?clashroyale://copyDeck?deck=27000013;27000006;26000002;26000000;26000031;28000011;26000095;28000009&amp;tt=159000000&amp;l=Royals">Copier dans le jeu</a>
-      </div>
-    </article>
-  </section>
-
-  <section id="nouveautes">
-    <h2>Les dernières nouveautés</h2>
-    <p class="lead">Mises à jour, événements et codes à utiliser.</p>
-    <ul class="news">
-      <li>
-        <img loading="lazy" src="./images/saison81bc.webp" alt="Visuel de la saison 80">
-        <div>
-          <h3>Saison 80 : Midnight Mischief et Ligue Touchdown (06.02.26)</h3>
-          <p>La Ligue Touchdown arrive : un mode classé compétitif où l’on joue avec un deck de 4 cartes seulement. Le cycle est ultra rapide, chaque placement compte. Les nouveaux Héros gobelins déploient une bannière de renforts à leur mort, et le P.E.K.K.A évolué gagne un boost de soin par élimination.</p>
-        </div>
-      </li>
-      <li>
-        <img loading="lazy" src="./images/image_test.jpg" alt="Calendrier des événements de février">
-        <div>
-          <h3>Calendrier des événements de février</h3>
-          <ul>
-            <li>6 au 9 février : Défi Draft des Héros gobelins, pour tester les nouvelles unités gratuitement.</li>
-            <li>9 au 16 février : événement Évolution de l’Armée de squelettes, avec des fragments d’évolution à gagner.</li>
-            <li>Jusqu’au 9 février : la Chasse aux couronnes continue, avec des coffres joker à chaque palier.</li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <img loading="lazy" src="./images/image_test3.jpg" alt="Codes créateur">
-        <div>
-          <h3>Codes de la boutique et code créateur : mhlgcy</h3>
-          <ul>
-            <li>FIREANDICE!! : bannière de combat « Ember Escape ».</li>
-            <li>TRUSTYTURRET : émote exclusive du Héros Mousquetaire.</li>
-            <li>WHENHOGSFLY! : émote animée des Cochons royaux.</li>
-            <li>ROYALEAFFAIR : cadres de bannière pour ton profil.</li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </section>
-
   <section id="joueur">
     <h2>Stats d’un joueur</h2>
     <p class="lead">Entre un tag pour voir le profil, le deck, les cartes, le classé et les 20 derniers combats. Le tag est sous le nom du joueur dans le jeu.</p>
     <div class="cr-search" style="padding:0">
-      <!-- Le onsubmit="return false;" empêche le rechargement de la page -->
       <form id="search-form" class="cr-form" onsubmit="return false;">
         <label for="tag-input">Tag du joueur (obligatoire)</label>
         <div class="cr-form-row">
@@ -161,48 +83,13 @@
       <div id="search-result" aria-live="polite"></div>
     </div>
   </section>
-
-  <section id="clan">
-    <h2>Notre clan : MH Legacy</h2>
-    <div class="clan" style="margin-top:20px">
-      <img loading="lazy" src="./images/clan.png" alt="Badge du clan MH Legacy">
-      <div>
-        <p>Rejoins le clan, ou jette un œil aux meilleurs clans du monde pour te mesurer à eux.</p>
-        <a class="btn" href="./clan_site.html">Voir les clans</a>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
-  <p>Ce contenu n’est pas affilié à, sponsorisé ni spécifiquement approuvé par Supercell. <a href="https://supercell.com/en/fan-content-policy/" target="_blank" rel="noopener">supercell.com/en/fan-content-policy</a>.</p>
-  <p><a href="#contenu">Retour en haut de la page</a></p>
+  <p>Ce contenu n’est pas affilié à, sponsorisé ni spécifiquement approuvé par Supercell.</p>
 </footer>
 
 <script src="./js/nav.js"></script>
-<script src="./js/recherche.js?v=10"></script>
-<script>
-document.addEventListener("DOMContentLoaded", async function () {
-  const chip = document.getElementById("chip");
-  if (!chip) return;
-  try {
-    // ⚠️ REMPLACE TON_VRAI_TAG PAR TON TAG ICI (ex: 2PP0Y0LR)
-    const r = await fetch("https://cr-stats.pm00buq.workers.dev?tag=v9jjgll0g");
-    if (!r.ok) return;
-    const data = await r.json();
-    const p = data.player;
-    const add = function (t, strong) {
-      const e = document.createElement(strong ? "b" : "span");
-      e.textContent = t;
-      chip.append(e);
-    };
-    add(p.name, true);
-    add(p.trophies.toLocaleString("fr-CH") + " trophées");
-    add("record " + p.bestTrophies.toLocaleString("fr-CH"));
-    if (p.clan) add(p.clan);
-    chip.hidden = false;
-  } catch (e) {}
-});
-</script>
+<script src="./js/recherche.js?v=12"></script>
 </body>
 </html>
