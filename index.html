@@ -183,17 +183,18 @@
   <p><a href="#contenu">Retour en haut de la page</a></p>
 </footer>
 
-<script src="js/nav.js" defer></script>
-<script src="recherche.js?v=6" defer></script>
-<script defer>
-document.addEventListener("DOMContentLoaded", async () => {
+<script src="js/nav.js"></script>
+<script src="recherche.js?v=7"></script>
+<script>
+document.addEventListener("DOMContentLoaded", async function () {
   const chip = document.getElementById("chip");
   if (!chip) return;
   try {
     const r = await fetch("https://cr-stats.pm00buq.workers.dev?tag=v9jjgll0g");
     if (!r.ok) return;
-    const { player: p } = await r.json();
-    const add = (t, strong) => {
+    const data = await r.json();
+    const p = data.player;
+    const add = function (t, strong) {
       const e = document.createElement(strong ? "b" : "span");
       e.textContent = t;
       chip.append(e);
@@ -203,8 +204,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     add("record " + p.bestTrophies.toLocaleString("fr-CH"));
     if (p.clan) add(p.clan);
     chip.hidden = false;
-  } catch {}
+  } catch (e) {
+    console.error("chip error", e);
+  }
 });
 </script>
-</body>
-</html>
