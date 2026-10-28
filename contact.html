@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — MH Legacy</title>
+  <link rel="icon" href="images/logo_clash_royale.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="top">
+    <div class="bar">
+      <a href="index.html" aria-label="Accueil"><img src="images/logo_clash_royale.png" alt="" width="44" height="44"></a>
+      <nav class="nav" aria-label="Navigation principale"><div class="nav-links"></div></nav>
+    </div>
+  </header>
+
+  <main id="contenu" class="page">
+    <h1>Contact</h1>
+
+    <section class="contact-box">
+      <h2>Contactez-moi</h2>
+      <form action="mailto:ton.email@example.com" method="post" enctype="text/plain">
+        <label for="name">Votre nom</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+
+        <label for="email">Votre email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" rows="8"></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <section class="description-perso">
+      <h2>À propos de moi</h2>
+      <img src="images/logo_pp.png" alt="Logo du créateur du site" width="100">
+      <p>Je suis apprenti informaticien à l’ETML, passionné de jeux vidéo, et je poste des vidéos de Clash Royale sur YouTube.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ce contenu n’est pas affilié à, sponsorisé ni spécifiquement approuvé par Supercell…</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

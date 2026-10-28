@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRL — MH Legacy</title>
+  <link rel="icon" href="images/logo_clash_royale.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .video-grid { display: grid; gap: 24px; margin-top: 24px; }
+    .video-grid video,
+    .video-grid iframe { width: 100%; border-radius: 12px; border: 3px solid var(--ink); }
+    .video-grid iframe { aspect-ratio: 16 / 9; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="top">
+    <div class="bar">
+      <a href="index.html" aria-label="Accueil"><img src="images/logo_clash_royale.png" alt="" width="44" height="44"></a>
+      <nav class="nav" aria-label="Navigation principale"><div class="nav-links"></div></nav>
+    </div>
+  </header>
+
+  <main id="contenu" class="page">
+    <h1>Clash Royale League</h1>
+    <p class="lead">Les derniers matchs et moments forts de la CRL.</p>
+
+    <section class="video-grid">
+      <h2>CRL World Finals 2025 — Mohamed Light vs Cal Sub</h2>
+      <video autoplay loop muted playsinline controls>
+        <source src="MOHAMED LIGHT vs CAL SUB  - CRL WORLD FINALS 2025 - INSANE ENDING FINAL ROUND.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture vidéo.
+      </video>
+
+      <h2>Résumé officiel</h2>
+      <iframe src="https://www.youtube.com/embed/kQ6JXJwzcGQ"
+              title="Résumé CRL 2025"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ce contenu n’est pas affilié à, sponsorisé ni spécifiquement approuvé par Supercell…</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

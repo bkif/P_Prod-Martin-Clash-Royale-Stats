@@ -1,0 +1,16 @@
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+.teams-box {
+  background: var(--ink);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.teams-box h2 { font-size: 1.4rem; margin-bottom: 12px; }
+.teams-box img { width: 80px; margin: 0 auto 16px; }
+.teams-box ul { text-align: left; padding-left: 20px; color: #dbe6ff; }

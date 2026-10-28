@@ -1,0 +1,33 @@
+.news-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .news-layout { grid-template-columns: 1fr; }
+}
+.seasons {
+  position: sticky; top: 84px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.seasons button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2px solid var(--royal);
+  background: var(--ink);
+  color: var(--snow);
+  font: inherit; font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: background .15s;
+}
+.seasons button:hover { background: var(--royal); }
+.news-content article {
+  background: rgba(255,255,255,.04);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.news-content ul { padding-left: 20px; color: #dbe6ff; }
+.news-content h2 { margin-bottom: 12px; }
