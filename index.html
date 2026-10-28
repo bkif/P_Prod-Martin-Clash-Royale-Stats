@@ -10,38 +10,53 @@
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/home.css">
-<!-- CSS intégré pour la recherche, plus de problème de chemin -->
 <style>
+/* CSS complet pour la recherche */
 .cr-search { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto 40px; padding: 0 16px; color: #fff; }
-.cr-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; padding: 20px; background: rgba(12, 24, 60, .82); border: 2px solid rgba(245, 197, 66, .6); border-radius: 16px; box-shadow: 0 6px 20px rgba(0, 0, 0, .45); }
+.cr-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; padding: 20px; background: rgba(12, 24, 60, .82); border: 2px solid rgba(245, 197, 66, .6); border-radius: 16px; }
 .cr-form label { font-size: 1rem; font-weight: 700; color: #ffc933; }
 .cr-form-row { display: flex; gap: 10px; flex-wrap: wrap; }
 .cr-form input { flex: 1 1 200px; padding: 12px 16px; border-radius: 10px; border: 2px solid #f5c542; background: rgba(10, 20, 50, .9); color: #fff; font-size: 1.05rem; }
-.cr-form button { padding: 12px 26px; border: 0; border-radius: 10px; background: linear-gradient(#ffd34d, #f29a00); color: #3a2300; font-weight: 800; font-size: 1.05rem; cursor: pointer; }
+.cr-form button { padding: 12px 26px; border: 0; border-radius: 10px; background: linear-gradient(#ffd34d, #f29a00); color: #3a2300; font-weight: 800; cursor: pointer; }
 .cr-message { text-align: center; font-size: 1.1rem; padding: 20px; color: #fff; }
-.cr-card { background: rgba(12, 24, 60, .82); border: 2px solid rgba(245, 197, 66, .6); border-radius: 16px; padding: 20px; margin-bottom: 20px; box-shadow: 0 6px 20px rgba(0, 0, 0, .45); }
+.cr-card { background: rgba(12, 24, 60, .82); border: 2px solid rgba(245, 197, 66, .6); border-radius: 16px; padding: 20px; margin-bottom: 20px; }
 .cr-name { margin: 0; font-size: 2rem; color: #ffd34d; }
 .cr-sub { margin: 4px 0 12px; opacity: .85; }
 .cr-title { margin: 0 0 10px; font-size: 1.3rem; color: #ffd34d; }
-.cr-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+
+/* Grille des stats */
+.cr-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; }
 .cr-stat { background: rgba(255, 255, 255, .08); border-radius: 12px; padding: 12px; text-align: center; }
 .cr-stat-value { display: block; font-size: 1.4rem; color: #fff; font-weight: 800; }
-.cr-stat-label { display: block; font-size: .85rem; opacity: .75; }
-.cr-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.cr-stat-label { display: block; font-size: 0.8rem; opacity: .75; }
+
+/* Colonnes Deck / Combats */
+.cr-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
 @media (max-width: 900px) { .cr-cols { grid-template-columns: 1fr; } }
-.cr-deckgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
+
+/* Deck */
+.cr-deckgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
 .cr-slot { position: relative; width: 100%; aspect-ratio: 3/4; }
-.cr-tile { width: 100%; height: 100%; border-radius: 8px; background: #141c30; border: 2px solid #556; position: relative; overflow: hidden; }
+.cr-tile { width: 100%; height: 100%; border-radius: 8px; background: #141c30; border: 3px solid #556; position: relative; overflow: hidden; }
 .cr-art img { width: 100%; height: 100%; object-fit: cover; }
-.cr-el { position: absolute; top: -8px; left: -8px; width: 24px; height: 24px; background: radial-gradient(circle at 35% 30%, #f5a0ff, #c53bd1 55%, #7b1389); border: 2px solid #f3c8ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; color: #fff; z-index: 4; }
-.cr-lv { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,.85)); text-align: center; font-weight: 700; font-size: 0.8rem; padding: 10px 0 4px; color: #fff; }
-.cr-r-common { border-color: #4b86c9; } .cr-r-rare { border-color: #d4861a; } .cr-r-epic { border-color: #a043cf; } .cr-r-legendary { border-color: #2bb9c4; } .cr-r-champion { border-color: #d9a400; }
+.cr-el { position: absolute; top: -6px; left: -6px; width: 22px; height: 22px; background: #d02bd9; border: 2px solid #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; color: #fff; z-index: 4; }
+.cr-lv { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.8); text-align: center; font-weight: 700; font-size: 0.75rem; padding: 4px 0; color: #fff; }
+
+/* Couleurs des bordures selon la rareté */
+.cr-r-common { border-color: #4b86c9; } .cr-r-rare { border-color: #d4861a; } 
+.cr-r-epic { border-color: #a043cf; } .cr-r-legendary { border-color: #2bb9c4; } 
+.cr-r-champion { border-color: #d9a400; }
+
+/* Combats */
 .cr-battles { display: flex; flex-direction: column; gap: 10px; }
-.cr-battle { border-left: 6px solid #888; background: rgba(255, 255, 255, .07); border-radius: 10px; padding: 10px 14px; }
-.cr-win { border-left-color: #3ddc6b; background: rgba(61, 220, 107, .12); }
-.cr-loss { border-left-color: #ff4d4d; background: rgba(255, 77, 77, .12); }
-.cr-result { font-size: 1.1rem; font-weight: 700; }
-.cr-win .cr-result { color: #3ddc6b; } .cr-loss .cr-result { color: #ff6b6b; }
+.cr-battle { border-left: 5px solid #888; background: rgba(255, 255, 255, .05); border-radius: 8px; padding: 12px; }
+.cr-win { border-left-color: #3ddc6b; background: rgba(61, 220, 107, .1); }
+.cr-loss { border-left-color: #ff4d4d; background: rgba(255, 77, 77, .1); }
+.cr-result { font-size: 1rem; font-weight: 800; }
+.cr-win .cr-result { color: #3ddc6b; } .cr-loss .cr-result { color: #ff4d4d; }
+.cr-score { font-weight: 800; font-size: 1rem; }
+.cr-meta { margin: 4px 0; font-size: 0.85rem; opacity: .8; }
+.cr-deck-small { display: flex; gap: 4px; flex-wrap: wrap; }
 </style>
 </head>
 <body>
@@ -49,7 +64,7 @@
 
 <header class="top">
   <div class="bar">
-    <a href="./index.html" aria-label="MH Legacy, accueil"><img src="./images/logo_clash_royale.png" alt="" width="44" height="44"></a>
+    <a href="./index.html" aria-label="Accueil"><img src="./images/logo_clash_royale.png" alt="" width="44" height="44"></a>
     <nav class="nav" aria-label="Navigation principale"><div class="nav-links"></div></nav>
   </div>
 </header>
@@ -58,11 +73,9 @@
   <div class="hero-in">
     <div>
       <h1>MH Legacy</h1>
-      <p>Le site Clash Royale suisse (ムレガシ MHL). Copie les decks qui gagnent en ce moment, regarde tes stats et tes 20 derniers combats, et suis chaque changement d’équilibrage.</p>
-      <div class="chip" id="chip" hidden></div>
+      <p>Le site Clash Royale suisse. Copie les decks, regarde tes stats et tes 20 derniers combats.</p>
       <div class="btns">
         <a class="btn" href="#joueur">Voir mes stats</a>
-        <a class="btn alt" href="#decks">Les decks du moment</a>
       </div>
     </div>
   </div>
@@ -71,10 +84,10 @@
 <main id="contenu">
   <section id="joueur">
     <h2>Stats d’un joueur</h2>
-    <p class="lead">Entre un tag pour voir le profil, le deck, les cartes, le classé et les 20 derniers combats. Le tag est sous le nom du joueur dans le jeu.</p>
+    <p class="lead">Entre un tag pour voir le profil, le deck et les 20 derniers combats.</p>
     <div class="cr-search" style="padding:0">
       <form id="search-form" class="cr-form" onsubmit="return false;">
-        <label for="tag-input">Tag du joueur (obligatoire)</label>
+        <label for="tag-input">Tag du joueur</label>
         <div class="cr-form-row">
           <input type="text" id="tag-input" required maxlength="16" autocomplete="off" placeholder="#GG829JGY">
           <button type="submit">Rechercher</button>
@@ -86,10 +99,10 @@
 </main>
 
 <footer>
-  <p>Ce contenu n’est pas affilié à, sponsorisé ni spécifiquement approuvé par Supercell.</p>
+  <p>Ce contenu n’est pas affilié à Supercell.</p>
 </footer>
 
 <script src="./js/nav.js"></script>
-<script src="./js/recherche.js?v=12"></script>
+<script src="./js/recherche.js?v=15"></script>
 </body>
 </html>
