@@ -56,6 +56,35 @@
 .cr-win .cr-result { color: #3ddc6b; } .cr-loss .cr-result { color: #ff4d4d; }
 .cr-score { font-weight: 800; font-size: 1rem; }
 .cr-meta { margin: 4px 0; font-size: 0.85rem; opacity: .8; }
+/* ===== EFFET ÉVOLUTION & HÉROS ===== */
+
+/* Conteneur de l'image */
+.cr-v-evo .cr-art, 
+.cr-v-hero .cr-art {
+  overflow: visible;
+}
+
+/* Effet de halo (glow) violet pour les évolutions, arc-en-ciel pour les héros */
+.cr-v-evo .cr-art img {
+  filter: drop-shadow(0 0 8px #d02bd9); /* Lueur violette */
+  transform: scale(1.05); /* Légèrement plus grande pour déborder */
+}
+
+.cr-v-hero .cr-art img {
+  filter: drop-shadow(0 0 8px #ffc933); /* Lueur dorée */
+  transform: scale(1.05);
+}
+
+/* On adapte la bordure de la tuile pour ces variantes */
+.cr-tile.cr-v-evo {
+  border-color: #d02bd9;
+  background: linear-gradient(135deg, #2a1040, #141c30);
+}
+
+.cr-tile.cr-v-hero {
+  border-color: #ffc933;
+  background: linear-gradient(135deg, #403010, #141c30);
+}
 .cr-deck-small { display: flex; gap: 4px; flex-wrap: wrap; }
 </style>
 </head>

@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!form || !input || !out) return;
 
-  // Bloque le rechargement
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     const tag = input.value.trim();
@@ -25,13 +24,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function message(text) {
-    out.replaceChildren(el("p", "cr-message", text));
+    out.innerHTML = `<p style="text-align:center;font-size:1.2rem;padding:20px;background:rgba(0,0,0,0.5);border-radius:10px;color:#fff;">${text}</p>`;
   }
 
-  // Création d'une carte
+  // Création d'une carte avec gestion des Évolutions / Héros
   function cardTile(c) {
+    const variant = c.variant || "normal";
+    const isEvo = variant === "evo";
+    const isHero = variant === "hero";
+    
+    // On choisit la bonne image
+    let imgSrc = c.image;
+    if (isEvo && c.evoImage) imgSrc = c.evoImage;
+    if (isHero && c.heroImage) imgSrc = c.heroImage;
+
     const slot = el("div", "cr-slot");
-    const tile = el("div", `cr-tile cr-r-${c.rarity ?? "common"}`);
+    // On ajoute la classe de la variante pour le halo
+    const tile = el("div", `cr-tile cr-r-${c.rarity ?? "common"} cr-v-${variant}`);
     
     if (typeof c.elixir === "number") {
       tile.append(el("span", "cr-el", String(c.elixir)));
@@ -39,9 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
     const art = el("div", "cr-art");
     const img = document.createElement("img");
-    img.src = c.image || "./images/logo_clash_royale.png";
+    img.src = imgSrc || "./images/logo_clash_royale.png";
+    img.onerror = function() { this.src = "./images/logo_clash_royale.png"; };
     img.alt = c.name;
-    img.loading = "lazy";
     art.append(img);
     
     tile.append(art);
@@ -50,32 +59,24 @@ document.addEventListener("DOMContentLoaded", function () {
     return slot;
   }
 
-  // En-tête du joueur
   function renderHeader(p) {
     const box = el("div", "cr-card");
     box.append(el("h3", "cr-name", p.name), el("p", "cr-sub", `${p.tag} · Niveau ${p.level}`));
     return box;
   }
 
-  // Toutes les stats
   function renderStats(p) {
     const box = el("div", "cr-card");
     const total = p.wins + p.losses;
     const winRate = total > 0 ? ((p.wins / total) * 100).toFixed(1) + " %" : "-";
     
     const items = [
-      ["Trophées", num(p.trophies)], 
-      ["Record", num(p.bestTrophies)],
-      ["Victoires", num(p.wins)], 
-      ["Défaites", num(p.losses)],
-      ["Taux de victoire", winRate],
-      ["3 couronnes", num(p.threeCrownWins)],
-      ["Combats", num(p.battleCount)],
-      ["Tour du Roi", p.kingTowerLevel ?? "-"],
-      ["Niveau Cartes", num(p.collectionLevel)],
-      ["Dons", num(p.totalDonations)],
-      ["Guerre", num(p.warDayWins)],
-      ["Carte favorite", p.favouriteCard ?? "-"]
+      ["Trophées", num(p.trophies)], ["Record", num(p.bestTrophies)],
+      ["Victoires", num(p.wins)], ["Défaites", num(p.losses)],
+      ["Taux de victoire", winRate], ["3 couronnes", num(p.threeCrownWins)],
+      ["Combats", num(p.battleCount)], ["Tour du Roi", p.kingTowerLevel ?? "-"],
+      ["Niveau Cartes", num(p.collectionLevel)], ["Dons", num(p.totalDonations)],
+      ["Guerre", num(p.warDayWins)], ["Carte favorite", p.favouriteCard ?? "-"]
     ];
     
     const grid = el("div", "cr-stats");
@@ -88,17 +89,20 @@ document.addEventListener("DOMContentLoaded", function () {
     return box;
   }
 
-  // Deck actuel
   function renderDeck(p) {
     const box = el("div", "cr-card");
     box.append(el("h4", "cr-title", "Deck actuel"));
     const grid = el("div", "cr-deckgrid");
-    (p.deck || []).forEach((c) => grid.append(cardTile(c)));
+    // On trie pour mettre les évolutions en premier (comme dans le jeu)
+    const sortedDeck = [...(p.deck || [])].sort((a, b) => {
+      const order = { evo: 0, hero: 1, normal: 2 };
+      return (order[a.variant || "normal"] || 2) - (order[b.variant || "normal"] || 2);
+    });
+    sortedDeck.forEach((c) => grid.append(cardTile(c)));
     box.append(grid);
     return box;
   }
 
-  // 20 derniers combats avec ✅ et ❌
   function renderBattles(battles) {
     const box = el("div", "cr-card");
     box.append(el("h4", "cr-title", "20 derniers combats"));
@@ -108,13 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
     battles.forEach((b) => {
       const row = el("div", `cr-battle cr-${b.result}`);
       
-      const head = el("div");
-      head.style.display = "flex";
-      head.style.justifyContent = "space-between";
-      head.style.alignItems = "center";
-      head.style.marginBottom = "8px";
-      
-      const resultIcon = b.result === "win" ? "✅ Victoire" : b.result === "loss" ? "❌ Défaite" : "🤝 Égalité";
+      const head = el("div", "cr-battle-head");
+      const resultIcon = b.result === "win" ? "✔️ Victoire" : b.result === "loss" ? "❌ Défaite" : "Égalité";
       
       head.append(
         el("span", "cr-result", resultIcon),
@@ -125,10 +124,15 @@ document.addEventListener("DOMContentLoaded", function () {
       
       const cards = el("div", "cr-deck-small");
       b.cards.forEach((c) => {
+        // Ici aussi on affiche la bonne image (évo ou normale)
+        const variant = c.variant || "normal";
+        let imgSrc = c.image;
+        if (variant === "evo" && c.evoImage) imgSrc = c.evoImage;
+        if (variant === "hero" && c.heroImage) imgSrc = c.heroImage;
+
         const img = document.createElement("img");
-        img.src = c.image || "./images/logo_clash_royale.png";
-        img.style.width = "32px";
-        img.style.borderRadius = "4px";
+        img.src = imgSrc || "./images/logo_clash_royale.png";
+        img.onerror = function() { this.src = "./images/logo_clash_royale.png"; };
         img.title = c.name;
         cards.append(img);
       });
