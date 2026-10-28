@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/home.css">
-<link rel="stylesheet" href="recherche.css?v=5">
+<link rel="stylesheet" href="recherche.css?v=6">
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -183,24 +183,28 @@
   <p><a href="#contenu">Retour en haut de la page</a></p>
 </footer>
 
-<script src="js/nav.js"></script>
-
-<script>
-(async () => {
+<script src="js/nav.js" defer></script>
+<script src="recherche.js?v=6" defer></script>
+<script defer>
+document.addEventListener("DOMContentLoaded", async () => {
   const chip = document.getElementById("chip");
+  if (!chip) return;
   try {
     const r = await fetch("https://cr-stats.pm00buq.workers.dev?tag=v9jjgll0g");
     if (!r.ok) return;
     const { player: p } = await r.json();
-    const add = (t, strong) => { const e = document.createElement(strong ? "b" : "span"); e.textContent = t; chip.append(e); };
+    const add = (t, strong) => {
+      const e = document.createElement(strong ? "b" : "span");
+      e.textContent = t;
+      chip.append(e);
+    };
     add(p.name, true);
     add(p.trophies.toLocaleString("fr-CH") + " trophées");
     add("record " + p.bestTrophies.toLocaleString("fr-CH"));
     if (p.clan) add(p.clan);
     chip.hidden = false;
   } catch {}
-})();
+});
 </script>
-<script src="recherche.js?v=5"></script>
 </body>
 </html>
